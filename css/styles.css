@@ -14,7 +14,7 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-    line-height: 1.6;
+    line-height: 1.0;
     color: var(--text-color);
     background-color: #1c1c1c;
 }
@@ -22,7 +22,6 @@ body {
 .cor_dominante {
     color: #32a1ff;
 }
-
 
 .container {
     max-width: 1200px;
@@ -60,6 +59,8 @@ body {
     display: flex;
     list-style: none;
     gap: 2rem;
+    z-index: 3000;
+    
 }
 
 .nav-links a {
@@ -67,6 +68,7 @@ body {
     color: var(--white);
     font-weight: 500;
     transition: color 0.3s ease;
+    
 }
 
 .nav-links a:hover {
@@ -77,89 +79,108 @@ body {
 .hero {
     height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     text-align: left;
     color: var(--white);
-    padding-top: 70px;
+    padding: 0;
     position: relative;
     overflow: hidden;
     background-color: #000;
 }
 
 .hero-content {
-    max-width: 1366px;
+    max-width: 100%;
     width: 100%;
     height: 100vh;
     background-image: url('../img/1.png');
-    background-position: center;
+    background-position: right center;
     background-size: cover;
     background-repeat: no-repeat;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: row;
     align-items: center;
-    gap:1rem;
-    padding-left: 10%;
-    padding-right: 10%;
+    justify-content: space-between;
+    padding-top: 120px;
+    position: relative;
+}
+
+
+.hero h1 {
+    font-size: 3.5rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
 }
 
 .hero-text {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width: 100%;
+    justify-content: center;
+    width: 50%;
+    padding-left: 10em;
+    z-index: 2;
 }
 
 .hero-image {
+    width: 50%;
     display: flex;
     justify-content: flex-end;
-    align-items: flex-end;
-    height: 100%;
+    align-items: center;
     overflow: hidden;
+    z-index: 1;
+    margin-top: 60px;
+    position: relative;
+    margin-right: 100px;
 }
 
 .hero-image img {
-    max-width: none;
-    height: 100vh;
-    object-fit: cover;
-    object-position: top;
-    margin: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: right center;
 }
 
 h4.hero-subtitle {
-    font-size: 1rem;
-    font-weight: 300;
-    margin-left: 13rem;
-    margin-bottom: -0.9rem;
+    position: relative;
+    font-size: 1.2rem;
+    font-weight: 300;    
+    opacity: 0.9;    
+    margin-left: 300px;
 }
 
-.hero-title {
-    font-size: 100rem;
+h1.hero-title {
+    font-size: 6em;
     font-weight: 700;
-    margin-left: 30px;
-    line-height: 0.9;
-    width: 100%;
-    text-align: left;
+    line-height: 1;
+    text-align: center;
     color: #f5f5f5f2;
     font-style: italic;
+    margin: 0;
 }
 
 .hero-name-macedo {
     display: block;
     font-style: italic;
-    margin-left: 8rem;
-    line-height: 1;
+    font-size: 4rem;
     color: var(--primary-color);
+    margin-left:280px;
+    text-align: center;
+    line-height: 1;
 }
 
 .hero-text h3 {
-    margin-left: 30px;
     font-size: 1.2rem;
-    line-height: 1;
-    width: 100%;
-    margin-top: 0.5rem;
+    line-height: 1.4;
+
     font-weight: 300;
     color: #f5f5f5f2;
+    text-align: center;
+    opacity: 0.9;
 }
 
 .hero-text h3:first-of-type {
@@ -181,13 +202,33 @@ h4.hero-subtitle {
     margin: 2rem 0;
 }
 
-.hero h1 {
-    font-size: 3.5rem;
+
+.hero-evento {
+    position: relative;
+    font-size: 0.9rem;
+    font-weight: 300;    
+    opacity: 0.9;    
+    margin-top: 100px;
+    background-color: #005fb1;
+    padding: 15px 25px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--white);
+    display: inline-block;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
 }
 
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
+.hero-evento:hover {
+    background-color: #004a8c;
+    transform: translateY(-2px);
+    border-color: var(--primary-color);
+    box-shadow: 0 5px 15px rgba(50, 161, 255, 0.2);
+}
+
+.hero-evento:active {
+    transform: translateY(0);
 }
 
 .cta-button {
@@ -336,19 +377,413 @@ h4.hero-subtitle {
     text-align: center;
 }
 
-/* Responsividade */
+/* Responsividade Global */
+@media (max-width: 1200px) {
+    .container {
+        max-width: 960px;
+    }
+
+    .livros-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        max-width: 720px;
+    }
+    
+    /* Header */
+    .nav-container {
+        padding: 0 20px;
+    }
+
+    /* Hero Section */
+    .hero-content {
+        flex-direction: column;
+        padding: 3rem 1.5rem 0 1.5rem;
+        background-image: none;
+    }
+
+    .hero-text {
+        width: 100%;
+        padding: 2rem;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-image {
+        width: 100%;
+        height: 60vh;
+    }
+
+    .hero-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+    }
+
+    .hero-title, 
+    .hero-name-macedo {
+        font-size: 3.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .hero-text h3 {
+        font-size: 1rem;
+        margin-top: 1.5rem;
+    }
+
+    /* Escritor Section */
+    .escritor-content {
+        flex-direction: column;
+        padding: 2rem;
+        gap: 2rem;
+    }
+
+    .escritor-image {
+        width: 100%;
+        transform: none;
+    }
+
+    .escritor-image img {
+        max-height: 60vh;
+        margin: 0 auto;
+    }
+
+    .escritor-text {
+        width: 100%;
+        align-items: center;
+    }
+
+    .escritor-text .titulo {
+        text-align: center;
+        align-items: center;
+        font-size: 2.2rem;
+    }
+
+    .escritor-text .descricao {
+        text-align: center;
+        font-size: 1.1rem;
+    }
+
+    /* Livros Section */
+    .livros-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .livros-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media (max-width: 768px) {
+    .container {
+        max-width: 540px;
+    }
+
+    /* Header */
     .nav-links {
         display: none;
     }
-    
-    .hero h1 {
+
+    /* Hero Section */
+    .hero-title, 
+    .hero-name-macedo {
+        font-size: 3rem;
+    }
+
+    .hero-image {
+        height: 45vh;
+    }
+
+    .hero-text h3 {
+        font-size: 1rem;
+        margin-top: 1.5rem;
+    }
+
+    /* Connections Section */
+    .connections h2 {
+        font-size: 1.5rem;
+    }
+
+    .connection-card {
+        width: 150px;
+    }
+
+    /* Escritor Section */
+    .escritor-content {
+        grid-template-columns: 1fr;
+        padding: 2rem;
+    }
+
+    .escritor-text {
+        padding: 1rem;
+        align-items: center;
+    }
+
+    .escritor-text .titulo {
+        font-size: 1.8rem;
+        text-align: center;
+        align-items: center;
+    }
+
+    .escritor-text .descricao {
+        font-size: 1rem;
+        text-align: center;
+        padding: 0;
+    }
+
+    .escritor-image {
+        height: 50vh;
+        justify-content: center;
+    }
+
+    .escritor-image img {
+        height: 100%;
+    }
+
+    /* Livros Section */
+    .livros h2 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .livros-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-title, 
+    .hero-name-macedo {
         font-size: 2.5rem;
     }
-    
-    .hero p {
-        font-size: 1rem;
+
+    .hero-image {
+        height: 40vh;
     }
+
+    .hero-text h3 {
+        font-size: 0.9rem;
+        margin-top: 1rem;
+    }
+
+    /* Connections Section */
+    .connection-card {
+        width: 120px;
+    }
+
+    /* Escritor Section */
+    .escritor-text .titulo {
+        font-size: 1.5rem;
+    }
+
+    /* Livros Section */
+    .livros-grid {
+        grid-template-columns: 1fr;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .livro-card img {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .livros-grid {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+    }
+}
+
+/* Sandeco Escritor Section */
+.sandeco-escritor {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    color: var(--white);
+
+    position: relative;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.escritor-content {
+    max-width: 1366px;
+    width: 100%;
+    height: 100vh;
+    background-image: url('../img/03.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 1rem;
+    padding-left: 10%;
+    padding-right: 10%;
+    position: relative;
+    z-index: 2;
+}
+
+.escritor-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+    padding: 2rem;
+}
+
+.escritor-text .titulo {
+    font-size: 2.8rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    text-align: right;
+    line-height: 1.2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.titulo-item {
+    color: var(--white);
+    padding: 5px 10px;
+    display: inline-block;
+}
+
+.titulo-destaque {
+    background-color: #1a3b5d;
+    color: white;
+    padding: 5px 10px;
+}
+
+.escritor-text .descricao {
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.6;
+    opacity: 0.9;
+    text-align: right;
+    max-width: 600px;
+}
+
+.destaque-texto {
+    background-color: #1a3b5d;
+    color: white;
+    padding: 2px 8px;
+    display: inline;
+}
+
+.escritor-image {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    height: 100%;
+    overflow: hidden;
+    transform: translateX(-100px);
+}
+
+.escritor-image img {
+    max-width: none;
+    height: 100vh;
+    object-fit: cover;
+    object-position: top;
+    margin: 0;
+}
+
+.sandeco-escritor::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(0,0,0,0.7) 0%, rgba(50, 161, 255, 0.3) 100%);
+    z-index: 1;
+}
+
+@media (max-width: 768px) {
+    .escritor-content {
+        grid-template-columns: 1fr;
+        padding: 2rem;
+    }
+
+    .escritor-text {
+        padding: 1rem;
+        align-items: center;
+    }
+
+    .escritor-text .titulo {
+        font-size: 1.5rem;
+        text-align: center;
+        align-items: center;
+    }
+
+    .escritor-text .descricao {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .escritor-image {
+        height: 50vh;
+        justify-content: center;
+    }
+
+    .escritor-image img {
+        height: 100%;
+    }
+}
+
+/* Removendo a seção revolution */
+.revolution,
+.revolution::before,
+.revolution-content,
+.revolution-text,
+.text-container,
+.animated-text,
+.animated-text span,
+.animated-text span span,
+.animated-text.highlight span span,
+.revolution-text h4,
+.revolution-text h1,
+.revolution-text h3,
+.revolution-cta {
+    display: none;
+}
+
+/* Removendo as animações não utilizadas */
+@keyframes revealText {
+    0% { width: 0; }
+    100% { width: 100%; }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulseGradient {
+    0% { opacity: 0.5; }
+    50% { opacity: 0.8; }
+    100% { opacity: 0.5; }
 }
 
 /* Connections Section */
@@ -526,15 +961,97 @@ h4.hero-subtitle {
 /* Sandeco Escritor Section */
 .sandeco-escritor {
     height: 100vh;
-    width: 100%;
-    background: url('../img/03.png');
-    background-size: cover;
-    background-position: center;
-    position: relative;
     display: flex;
     align-items: center;
+    justify-content: center;
+    text-align: left;
     color: var(--white);
+
+    position: relative;
     overflow: hidden;
+    background-color: #000;
+}
+
+.escritor-content {
+    max-width: 1366px;
+    width: 100%;
+    height: 100vh;
+    background-image: url('../img/03.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 1rem;
+    padding-left: 10%;
+    padding-right: 10%;
+    position: relative;
+    z-index: 2;
+}
+
+.escritor-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+    padding: 2rem;
+}
+
+.escritor-text .titulo {
+    font-size: 2.8rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    text-align: right;
+    line-height: 1.2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.titulo-item {
+    color: var(--white);
+    padding: 5px 10px;
+    display: inline-block;
+}
+
+.titulo-destaque {
+    background-color: #1a3b5d;
+    color: white;
+    padding: 5px 10px;
+}
+
+.escritor-text .descricao {
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.6;
+    opacity: 0.9;
+    text-align: right;
+    max-width: 600px;
+}
+
+.destaque-texto {
+    background-color: #1a3b5d;
+    color: white;
+    padding: 2px 8px;
+    display: inline;
+}
+
+.escritor-image {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    height: 100%;
+    overflow: hidden;
+    transform: translateX(-100px);
+}
+
+.escritor-image img {
+    max-width: none;
+    height: 100vh;
+    object-fit: cover;
+    object-position: top;
+    margin: 0;
 }
 
 .sandeco-escritor::before {
@@ -548,49 +1065,6 @@ h4.hero-subtitle {
     z-index: 1;
 }
 
-.escritor-content {
-    max-width: 1366px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0;
-    position: relative;
-    z-index: 2;
-    display: grid;
-    grid-template-columns: 0.8fr 1.2fr;
-    align-items: center;
-}
-
-.escritor-text {
-    padding-right: 5%;
-    text-align: right;
-}
-
-.escritor-text h3 {
-    font-size: 1.2rem;
-    font-weight: 300;
-    line-height: 2.5;
-    opacity: 0.9;
-    text-align: right;
-    word-spacing: 0.5em;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-}
-
-.escritor-image {
-    height: 80vh;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-}
-
-.escritor-image img {
-    height: 80vh;
-    width: auto;
-    object-fit: contain;
-    max-height: none;
-}
-
 @media (max-width: 768px) {
     .escritor-content {
         grid-template-columns: 1fr;
@@ -598,13 +1072,19 @@ h4.hero-subtitle {
     }
 
     .escritor-text {
-        padding: 2rem;
-        text-align: center;
+        padding: 1rem;
+        align-items: center;
     }
 
-    .escritor-text h3 {
+    .escritor-text .titulo {
+        font-size: 1.5rem;
         text-align: center;
-        font-size: 1.2rem;
+        align-items: center;
+    }
+
+    .escritor-text .descricao {
+        font-size: 1rem;
+        text-align: center;
     }
 
     .escritor-image {
@@ -614,5 +1094,304 @@ h4.hero-subtitle {
 
     .escritor-image img {
         height: 100%;
+    }
+}
+
+/* Removendo a seção revolution */
+.revolution,
+.revolution::before,
+.revolution-content,
+.revolution-text,
+.text-container,
+.animated-text,
+.animated-text span,
+.animated-text span span,
+.animated-text.highlight span span,
+.revolution-text h4,
+.revolution-text h1,
+.revolution-text h3,
+.revolution-cta {
+    display: none;
+}
+
+/* Removendo as animações não utilizadas */
+@keyframes revealText {
+    0% { width: 0; }
+    100% { width: 100%; }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulseGradient {
+    0% { opacity: 0.5; }
+    50% { opacity: 0.8; }
+    100% { opacity: 0.5; }
+}
+
+/* Responsividade Global */
+@media (max-width: 1200px) {
+    .container {
+        max-width: 960px;
+    }
+
+    .livros-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        max-width: 720px;
+    }
+    
+    /* Header */
+    .nav-container {
+        padding: 0 20px;
+    }
+
+    /* Hero Section */
+    .hero {
+        height: calc(100vh - 50px);
+    }
+
+    .hero-content {
+        height: calc(100vh - 50px);
+        padding: 3rem 1.5rem 0 1.5rem;
+    }
+
+    .hero-text {
+        padding-top: 4rem;
+    }
+
+    .hero-title, 
+    .hero-name-macedo {
+        font-size: 3.5rem;
+    }
+
+    .hero-image {
+        height: 50vh;
+    }
+
+    /* Escritor Section */
+    .escritor-content {
+        flex-direction: column;
+        padding: 2rem;
+        gap: 2rem;
+    }
+
+    .escritor-image {
+        width: 100%;
+        transform: none;
+    }
+
+    .escritor-image img {
+        max-height: 60vh;
+        margin: 0 auto;
+    }
+
+    .escritor-text {
+        width: 100%;
+        align-items: center;
+    }
+
+    .escritor-text .titulo {
+        text-align: center;
+        align-items: center;
+        font-size: 2.2rem;
+    }
+
+    .escritor-text .descricao {
+        text-align: center;
+        font-size: 1.1rem;
+    }
+
+    /* Livros Section */
+    .livros-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .livros-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 540px;
+    }
+
+    /* Header */
+    .nav-links {
+        display: none;
+    }
+
+    /* Hero Section */
+    .hero-title, 
+    .hero-name-macedo {
+        font-size: 3rem;
+    }
+
+    .hero-image {
+        height: 45vh;
+    }
+
+    .hero-text h3 {
+        font-size: 1rem;
+        margin-top: 1.5rem;
+    }
+
+    /* Connections Section */
+    .connections h2 {
+        font-size: 1.5rem;
+    }
+
+    .connection-card {
+        width: 150px;
+    }
+
+    /* Escritor Section */
+    .escritor-content {
+        grid-template-columns: 1fr;
+        padding: 2rem;
+    }
+
+    .escritor-text {
+        padding: 1rem;
+        align-items: center;
+    }
+
+    .escritor-text .titulo {
+        font-size: 1.8rem;
+        text-align: center;
+        align-items: center;
+    }
+
+    .escritor-text .descricao {
+        font-size: 1rem;
+        text-align: center;
+        padding: 0;
+    }
+
+    .escritor-image {
+        height: 50vh;
+        justify-content: center;
+    }
+
+    .escritor-image img {
+        height: 100%;
+    }
+
+    /* Livros Section */
+    .livros h2 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .livros-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-title, 
+    .hero-name-macedo {
+        font-size: 2.5rem;
+    }
+
+    .hero-image {
+        height: 40vh;
+    }
+
+    .hero-text h3 {
+        font-size: 0.9rem;
+        margin-top: 1rem;
+    }
+
+    /* Connections Section */
+    .connection-card {
+        width: 120px;
+    }
+
+    /* Escritor Section */
+    .escritor-text .titulo {
+        font-size: 1.5rem;
+    }
+
+    /* Livros Section */
+    .livros-grid {
+        grid-template-columns: 1fr;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .livro-card img {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .livros-grid {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+    }
+}
+
+/* Seção Demonstração */
+.demonstracao {
+    background-color: #090909;
+    padding: 6rem 2rem;
+    text-align: center;
+    position: relative;
+}
+
+.demonstracao h2 {
+    color: var(--white);
+    font-size: 2.8rem;
+    margin-bottom: 3rem;
+    font-weight: 500;
+}
+
+.video-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    padding-bottom: 56.25%; /* Proporção 16:9 */
+    height: 0;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(50, 161, 255, 0.2);
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+@media (max-width: 768px) {
+    .demonstracao {
+        padding: 4rem 1rem;
+    }
+
+    .demonstracao h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
     }
 } 

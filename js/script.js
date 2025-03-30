@@ -40,3 +40,20 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+// Intersection Observer para a seção revolution
+const revolutionSection = document.querySelector('.revolution');
+const revolutionObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            revolutionObserver.unobserve(entry.target); // Para que a animação ocorra apenas uma vez
+        }
+    });
+}, {
+    threshold: 0.2 // A animação começará quando 20% da seção estiver visível
+});
+
+if (revolutionSection) {
+    revolutionObserver.observe(revolutionSection);
+}
+
