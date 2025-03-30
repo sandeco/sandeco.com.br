@@ -423,4 +423,196 @@ h4.hero-subtitle {
 
 .connections-container:hover {
     animation-play-state: paused;
+}
+
+/* Livros Section */
+.livros {
+    background-color: #090909;
+    padding: 4rem 0;
+    width: 100%;
+}
+
+.livros h2 {
+    color: var(--white);
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    padding-left: 2rem;
+    max-width: 1200px;
+    margin: 0 auto 3rem;
+}
+
+.livros-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    padding: 0 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.livro-card {
+    background-color: #090909;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    aspect-ratio: 3/4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+}
+
+.livro-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 30px var(--primary-color);
+}
+
+.livro-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 1rem;
+    transition: filter 0.3s ease;
+}
+
+.livro-card:hover img {
+    filter: brightness(1.1);
+}
+
+.livro-card h3 {
+    color: var(--white);
+    font-size: 1.2rem;
+    padding: 1rem;
+    margin: 0;
+    text-align: center;
+}
+
+.livro-button {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 1rem auto;
+    transition: background-color 0.3s ease;
+}
+
+.livro-button:hover {
+    background-color: #1a3b5d;
+}
+
+@media (max-width: 1200px) {
+    .livros-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .livros-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .livros-grid {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+    }
+}
+
+/* Sandeco Escritor Section */
+.sandeco-escritor {
+    height: 100vh;
+    width: 100%;
+    background: url('../img/03.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: var(--white);
+    overflow: hidden;
+}
+
+.sandeco-escritor::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(0,0,0,0.7) 0%, rgba(50, 161, 255, 0.3) 100%);
+    z-index: 1;
+}
+
+.escritor-content {
+    max-width: 1366px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    align-items: center;
+}
+
+.escritor-text {
+    padding-right: 5%;
+    text-align: right;
+}
+
+.escritor-text h3 {
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 2.5;
+    opacity: 0.9;
+    text-align: right;
+    word-spacing: 0.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.escritor-image {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.escritor-image img {
+    height: 80vh;
+    width: auto;
+    object-fit: contain;
+    max-height: none;
+}
+
+@media (max-width: 768px) {
+    .escritor-content {
+        grid-template-columns: 1fr;
+        padding: 2rem;
+    }
+
+    .escritor-text {
+        padding: 2rem;
+        text-align: center;
+    }
+
+    .escritor-text h3 {
+        text-align: center;
+        font-size: 1.2rem;
+    }
+
+    .escritor-image {
+        height: 50vh;
+        justify-content: center;
+    }
+
+    .escritor-image img {
+        height: 100%;
+    }
 } 
