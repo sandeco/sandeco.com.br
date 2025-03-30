@@ -494,7 +494,7 @@ h1.hero-title {
     .nav-links {
         display: none;
     }
-
+    
     /* Hero Section */
     .hero-title, 
     .hero-name-macedo {
@@ -568,7 +568,7 @@ h1.hero-title {
     .hero-name-macedo {
         font-size: 2.5rem;
     }
-
+    
     .hero-image {
         height: 40vh;
     }
@@ -958,25 +958,23 @@ h1.hero-title {
     }
 }
 
-/* Sandeco Escritor Section */
-.sandeco-escritor {
+/* Sandeco Embaixador Section */
+.sandeco-embaixador {
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: left;
     color: var(--white);
-
     position: relative;
     overflow: hidden;
     background-color: #000;
 }
 
-.escritor-content {
+.embaixador-content {
     max-width: 1366px;
     width: 100%;
-    height: 100vh;
-    background-image: url('../img/03.png');
+    background-image: url('../img/background_embaixador.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -984,21 +982,21 @@ h1.hero-title {
     grid-template-columns: 1fr 1fr;
     align-items: center;
     gap: 1rem;
-    padding-left: 10%;
+    padding-left: 60px;
     padding-right: 10%;
     position: relative;
     z-index: 2;
 }
 
-.escritor-text {
+.embaixador-text {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     width: 100%;
-    padding: 2rem;
+    padding: 5rem;
 }
 
-.escritor-text .titulo {
+.embaixador-text .titulo {
     font-size: 2.8rem;
     font-weight: 500;
     margin-bottom: 2rem;
@@ -1009,52 +1007,42 @@ h1.hero-title {
     align-items: flex-end;
 }
 
-.titulo-item {
-    color: var(--white);
-    padding: 5px 10px;
-    display: inline-block;
-}
-
-.titulo-destaque {
-    background-color: #1a3b5d;
-    color: white;
-    padding: 5px 10px;
-}
-
-.escritor-text .descricao {
+.embaixador-text .descricao {
     font-size: 1.2rem;
     font-weight: 500;
-    line-height: 1.6;
+    line-height: 2;
     opacity: 0.9;
     text-align: right;
     max-width: 600px;
 }
 
-.destaque-texto {
+.embaixador-text .destaque-texto {
     background-color: #1a3b5d;
     color: white;
     padding: 2px 8px;
     display: inline;
 }
 
-.escritor-image {
+.embaixador-image {
     display: flex;
     justify-content: flex-start;
-    align-items: flex-end;
+    align-items: center;
     height: 100%;
-    overflow: hidden;
-    transform: translateX(-100px);
+    overflow: visible;
+    transform: translateX(-250px);
+    width: 100%;
 }
 
-.escritor-image img {
+.embaixador-image img {
     max-width: none;
-    height: 100vh;
-    object-fit: cover;
-    object-position: top;
+    height: 90vh;
+    width: auto;
+    object-fit: contain;
+    object-position: center;
     margin: 0;
 }
 
-.sandeco-escritor::before {
+.sandeco-embaixador::before {
     content: '';
     position: absolute;
     top: 0;
@@ -1066,287 +1054,39 @@ h1.hero-title {
 }
 
 @media (max-width: 768px) {
-    .escritor-content {
+    .embaixador-content {
         grid-template-columns: 1fr;
         padding: 2rem;
     }
 
-    .escritor-text {
+    .embaixador-text {
         padding: 1rem;
         align-items: center;
     }
 
-    .escritor-text .titulo {
+    .embaixador-text .titulo {
         font-size: 1.5rem;
         text-align: center;
         align-items: center;
     }
 
-    .escritor-text .descricao {
+    .embaixador-text .descricao {
         font-size: 1rem;
         text-align: center;
     }
 
-    .escritor-image {
+    .embaixador-image {
+        width: 100%;
         height: 50vh;
         justify-content: center;
-    }
-
-    .escritor-image img {
-        height: 100%;
-    }
-}
-
-/* Removendo a seção revolution */
-.revolution,
-.revolution::before,
-.revolution-content,
-.revolution-text,
-.text-container,
-.animated-text,
-.animated-text span,
-.animated-text span span,
-.animated-text.highlight span span,
-.revolution-text h4,
-.revolution-text h1,
-.revolution-text h3,
-.revolution-cta {
-    display: none;
-}
-
-/* Removendo as animações não utilizadas */
-@keyframes revealText {
-    0% { width: 0; }
-    100% { width: 100%; }
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes pulseGradient {
-    0% { opacity: 0.5; }
-    50% { opacity: 0.8; }
-    100% { opacity: 0.5; }
-}
-
-/* Responsividade Global */
-@media (max-width: 1200px) {
-    .container {
-        max-width: 960px;
-    }
-
-    .livros-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media (max-width: 992px) {
-    .container {
-        max-width: 720px;
-    }
-    
-    /* Header */
-    .nav-container {
-        padding: 0 20px;
-    }
-
-    /* Hero Section */
-    .hero {
-        height: calc(100vh - 50px);
-    }
-
-    .hero-content {
-        height: calc(100vh - 50px);
-        padding: 3rem 1.5rem 0 1.5rem;
-    }
-
-    .hero-text {
-        padding-top: 4rem;
-    }
-
-    .hero-title, 
-    .hero-name-macedo {
-        font-size: 3.5rem;
-    }
-
-    .hero-image {
-        height: 50vh;
-    }
-
-    /* Escritor Section */
-    .escritor-content {
-        flex-direction: column;
-        padding: 2rem;
-        gap: 2rem;
-    }
-
-    .escritor-image {
-        width: 100%;
         transform: none;
+        overflow: hidden;
     }
 
-    .escritor-image img {
-        max-height: 60vh;
-        margin: 0 auto;
-    }
-
-    .escritor-text {
-        width: 100%;
-        align-items: center;
-    }
-
-    .escritor-text .titulo {
-        text-align: center;
-        align-items: center;
-        font-size: 2.2rem;
-    }
-
-    .escritor-text .descricao {
-        text-align: center;
-        font-size: 1.1rem;
-    }
-
-    /* Livros Section */
-    .livros-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1.5rem;
-        padding: 1rem;
-    }
-}
-
-@media (max-width: 900px) {
-    .livros-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
-    .container {
-        max-width: 540px;
-    }
-
-    /* Header */
-    .nav-links {
-        display: none;
-    }
-
-    /* Hero Section */
-    .hero-title, 
-    .hero-name-macedo {
-        font-size: 3rem;
-    }
-
-    .hero-image {
-        height: 45vh;
-    }
-
-    .hero-text h3 {
-        font-size: 1rem;
-        margin-top: 1.5rem;
-    }
-
-    /* Connections Section */
-    .connections h2 {
-        font-size: 1.5rem;
-    }
-
-    .connection-card {
-        width: 150px;
-    }
-
-    /* Escritor Section */
-    .escritor-content {
-        grid-template-columns: 1fr;
-        padding: 2rem;
-    }
-
-    .escritor-text {
-        padding: 1rem;
-        align-items: center;
-    }
-
-    .escritor-text .titulo {
-        font-size: 1.8rem;
-        text-align: center;
-        align-items: center;
-    }
-
-    .escritor-text .descricao {
-        font-size: 1rem;
-        text-align: center;
-        padding: 0;
-    }
-
-    .escritor-image {
-        height: 50vh;
-        justify-content: center;
-    }
-
-    .escritor-image img {
+    .embaixador-image img {
         height: 100%;
-    }
-
-    /* Livros Section */
-    .livros h2 {
-        font-size: 2rem;
-        margin-bottom: 1.5rem;
-    }
-
-    .livros-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
-    }
-}
-
-@media (max-width: 576px) {
-    .hero-title, 
-    .hero-name-macedo {
-        font-size: 2.5rem;
-    }
-
-    .hero-image {
-        height: 40vh;
-    }
-
-    .hero-text h3 {
-        font-size: 0.9rem;
-        margin-top: 1rem;
-    }
-
-    /* Connections Section */
-    .connection-card {
-        width: 120px;
-    }
-
-    /* Escritor Section */
-    .escritor-text .titulo {
-        font-size: 1.5rem;
-    }
-
-    /* Livros Section */
-    .livros-grid {
-        grid-template-columns: 1fr;
-        max-width: 300px;
-        margin: 0 auto;
-    }
-
-    .livro-card img {
-        max-width: 100%;
-    }
-}
-
-@media (max-width: 600px) {
-    .livros-grid {
-        grid-template-columns: 1fr;
-        padding: 0 1rem;
+        width: auto;
+        object-position: center;
     }
 }
 
