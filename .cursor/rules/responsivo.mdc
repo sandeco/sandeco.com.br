@@ -1,0 +1,25 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+
+# Your rule content
+
+Sempre que você for gerar uma seção, componente ou qualquer elemento em HTML ou CSS, **garanta que o layout seja responsivo**, especialmente para os seguintes breakpoints:
+
+- max-width: 1200px (telas médias/grandes, como laptops)
+- max-width: 900px (telas intermediárias entre tablets e desktops pequenos)
+- max-width: 768px (tablets e celulares em modo paisagem)
+- max-width: 600px (celulares em modo retrato)
+
+Para isso:
+- Utilize media queries sempre que necessário para ajustar layout, espaçamentos (padding/margin), ordenação de elementos e tamanhos de fontes.
+- Prefira `display: flex` e `display: grid` para construir estruturas que se adaptam bem a diferentes tamanhos.
+- Certifique-se de que os textos, imagens, botões e seções não quebrem, não saiam da tela e mantenham boa legibilidade em todas as resoluções.
+- Evite valores fixos de `width` e `height`; opte por `max-width`, `min-height`, `vw`, `vh` ou unidades relativas.
+- Priorize uma boa experiência de leitura e navegação em todas as dimensões listadas.
+
+Sempre revise o comportamento visual com base nesses pontos antes de finalizar a resposta.
+
+

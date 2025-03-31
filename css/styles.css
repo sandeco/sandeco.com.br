@@ -44,7 +44,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
 }
 
@@ -58,21 +58,23 @@ body {
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 2rem;
-    z-index: 3000;
-    
+    gap: 1.5rem;
+    flex-wrap: wrap;
 }
 
 .nav-links a {
     text-decoration: none;
     color: var(--white);
-    font-weight: 500;
-    transition: color 0.3s ease;
-    
+    font-weight: 400;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    padding: 0.5rem 0.8rem;
+    border-radius: 5px;
 }
 
 .nav-links a:hover {
     color: var(--primary-color);
+    background-color: rgba(50, 161, 255, 0.1);
 }
 
 /* Hero Section */
@@ -117,13 +119,17 @@ body {
 }
 
 .hero-text {
+    padding: 6rem 0 0 0;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    width: 50%;
-    padding-left: 10em;
+    gap: 0.2rem;
+    max-width: 600px;
     z-index: 2;
+}
+
+.hero-text .btn-san {
+    margin-top: 2rem;
+    width: auto;
 }
 
 .hero-image {
@@ -383,8 +389,36 @@ h1.hero-title {
         max-width: 960px;
     }
 
-    .livros-grid {
-        grid-template-columns: repeat(3, 1fr);
+    .hero-text {
+        padding-left: 5em;
+    }
+
+    .hero-title {
+        font-size: 5em;
+    }
+
+    .hero-name-macedo {
+        font-size: 3.5rem;
+        margin-left: 200px;
+    }
+
+    .embaixador-content,
+    .escritor-content {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .nav-container {
+        padding: 1rem;
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
+
+    .nav-links a {
+        font-size: 0.85rem;
+        padding: 0.4rem 0.6rem;
     }
 }
 
@@ -393,95 +427,62 @@ h1.hero-title {
         max-width: 720px;
     }
     
-    /* Header */
-    .nav-container {
-        padding: 0 20px;
-    }
-
-    /* Hero Section */
     .hero-content {
         flex-direction: column;
         padding: 3rem 1.5rem 0 1.5rem;
         background-image: none;
+        height: auto;
     }
 
     .hero-text {
-        width: 100%;
-        padding: 2rem;
-        align-items: center;
-        text-align: center;
+        padding: 4rem 0 0 0;
+    }
+
+    .hero-title {
+        font-size: 4em;
+    }
+
+    .hero-name-macedo {
+        font-size: 3rem;
+        margin-left: 0;
+    }
+
+    .hero-subtitle {
+        margin-left: 0;
     }
 
     .hero-image {
         width: 100%;
         height: 60vh;
+        margin-right: 0;
     }
 
-    .hero-image img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-        object-position: center;
-    }
-
-    .hero-title, 
-    .hero-name-macedo {
-        font-size: 3.5rem;
-    }
-
-    .hero-subtitle {
-        font-size: 1rem;
-    }
-
-    .hero-text h3 {
-        font-size: 1rem;
-        margin-top: 1.5rem;
-    }
-
-    /* Escritor Section */
+    .embaixador-content,
     .escritor-content {
-        flex-direction: column;
-        padding: 2rem;
-        gap: 2rem;
+        grid-template-columns: 1fr;
+        height: auto;
+        min-height: 100vh;
     }
 
+    .embaixador-image,
     .escritor-image {
-        width: 100%;
         transform: none;
-    }
-
-    .escritor-image img {
-        max-height: 60vh;
-        margin: 0 auto;
-    }
-
-    .escritor-text {
         width: 100%;
-        align-items: center;
+        height: 60vh;
     }
 
-    .escritor-text .titulo {
-        text-align: center;
-        align-items: center;
-        font-size: 2.2rem;
+    .embaixador-text,
+    .escritor-text {
+        padding: 3rem;
     }
 
-    .escritor-text .descricao {
-        text-align: center;
-        font-size: 1.1rem;
+    .hero-text .btn-san {
+        margin-top: 1.5rem;
+        max-width: 300px;
     }
 
-    /* Livros Section */
-    .livros-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1.5rem;
-        padding: 1rem;
-    }
-}
-
-@media (max-width: 900px) {
-    .livros-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .nav-links {
+        display: none;
     }
 }
 
@@ -490,113 +491,95 @@ h1.hero-title {
         max-width: 540px;
     }
 
-    /* Header */
-    .nav-links {
-        display: none;
+    .hero-title {
+        font-size: 3.5em;
     }
-    
-    /* Hero Section */
-    .hero-title, 
+
     .hero-name-macedo {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 
     .hero-image {
-        height: 45vh;
-    }
-
-    .hero-text h3 {
-        font-size: 1rem;
-        margin-top: 1.5rem;
-    }
-
-    /* Connections Section */
-    .connections h2 {
-        font-size: 1.5rem;
-    }
-
-    .connection-card {
-        width: 150px;
-    }
-
-    /* Escritor Section */
-    .escritor-content {
-        grid-template-columns: 1fr;
-        padding: 2rem;
-    }
-
-    .escritor-text {
-        padding: 1rem;
-        align-items: center;
-    }
-
-    .escritor-text .titulo {
-        font-size: 1.8rem;
-        text-align: center;
-        align-items: center;
-    }
-
-    .escritor-text .descricao {
-        font-size: 1rem;
-        text-align: center;
-        padding: 0;
-    }
-
-    .escritor-image {
         height: 50vh;
-        justify-content: center;
     }
 
-    .escritor-image img {
-        height: 100%;
+    .embaixador-text,
+    .escritor-text {
+        padding: 3rem 0 0 0;
     }
 
-    /* Livros Section */
-    .livros h2 {
+    .embaixador-text .titulo,
+    .escritor-text .titulo {
         font-size: 2rem;
-        margin-bottom: 1.5rem;
     }
 
-    .livros-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
+    .embaixador-text .descricao,
+    .escritor-text .descricao {
+        font-size: 1.1rem;
+        text-align: center;
+        padding: 0 1rem;
+    }
+
+    .demonstracao h2 {
+        font-size: 2.2rem;
+        padding: 0 1rem;
+    }
+
+    .hero-text .btn-san {
+        margin-top: 1rem;
+        max-width: 250px;
+    }
+
+    .btn-san {
+        font-size: 0.85rem;
+        padding: 12px 20px;
     }
 }
 
 @media (max-width: 576px) {
-    .hero-title, 
-    .hero-name-macedo {
-        font-size: 2.5rem;
+    .hero-title {
+        font-size: 3em;
     }
-    
-    .hero-image {
-        height: 40vh;
+
+    .hero-name-macedo {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
     }
 
     .hero-text h3 {
         font-size: 0.9rem;
-        margin-top: 1rem;
     }
 
-    /* Connections Section */
-    .connection-card {
-        width: 120px;
+    .hero-evento {
+        font-size: 0.8rem;
+        padding: 12px 20px;
     }
 
-    /* Escritor Section */
+    .embaixador-text .titulo,
     .escritor-text .titulo {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
     }
 
-    /* Livros Section */
-    .livros-grid {
-        grid-template-columns: 1fr;
-        max-width: 300px;
-        margin: 0 auto;
+    .embaixador-text .descricao,
+    .escritor-text .descricao {
+        font-size: 1rem;
     }
 
-    .livro-card img {
-        max-width: 100%;
+    .demonstracao h2 {
+        font-size: 1.8rem;
+    }
+
+    .video-container {
+        margin: 0 -1rem;
+        border-radius: 0;
+    }
+
+    .btn-san {
+        font-size: 0.8rem;
+        padding: 10px 15px;
     }
 }
 
@@ -789,10 +772,10 @@ h1.hero-title {
 /* Connections Section */
 .connections {
     background-color: #090909;
-    padding: 4rem 2rem;
+    padding: 2rem 2rem;
     border-radius: 20px;
     margin: 2rem auto;
-    max-width: 1200px;
+    max-width: 1350px;
     overflow: hidden;
 }
 
@@ -960,7 +943,7 @@ h1.hero-title {
 
 /* Sandeco Embaixador Section */
 .sandeco-embaixador {
-    height: 100vh;
+    height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -974,6 +957,7 @@ h1.hero-title {
 .embaixador-content {
     max-width: 1920px;
     width: 100%;
+    height: 100vh;
     background-image: url('../img/background_embaixador.jpg');
     background-position: center;
     background-size: cover;
@@ -993,7 +977,7 @@ h1.hero-title {
     flex-direction: column;
     align-items: flex-end;
     width: 100%;
-    padding: 5rem;
+    padding: 2rem;
 }
 
 .embaixador-text .titulo {
@@ -1007,10 +991,10 @@ h1.hero-title {
     align-items: flex-end;
 }
 
-.embaixador-text .descricao {
+.embaixador-text .descricao_embaixador {
     font-size: 1.2rem;
     font-weight: 500;
-    line-height: 2;
+    line-height: 1.2em;
     opacity: 0.9;
     text-align: right;
     max-width: 600px;
@@ -1134,4 +1118,342 @@ h1.hero-title {
         font-size: 2rem;
         margin-bottom: 2rem;
     }
+}
+
+/* Testimonials Section */
+.testimonials {
+    background-color: #090909;
+    padding: 6rem 0;
+    margin: 0 auto;
+}
+
+.container-lg {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.testimonials h2 {
+    font-size: 2.8rem;
+    margin-bottom: 4rem;
+    color: var(--white);
+}
+
+.testimonials .highlight {
+    color: var(--primary-color);
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.col-12 {
+    width: 100%;
+    padding: 0 15px;
+}
+
+.col-md-4 {
+    width: 100%;
+    padding: 0 15px;
+}
+
+.testimonial-card {
+    background-color: #101010;
+    border-radius: 15px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(50, 161, 255, 0.1);
+}
+
+.testimonial-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+    object-fit: cover;
+}
+
+.testimonial-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+}
+
+.testimonial-card h4 {
+    color: var(--white);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.testimonial-role {
+    color: var(--primary-color);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.btn-san {
+    position: relative;
+    font-size: 0.9rem;
+    font-weight: 300;    
+    opacity: 0.9;    
+    background-color: #005fb1;
+    padding: 15px 25px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--white);
+    display: inline-block;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    text-align: center;
+}
+
+.btn-san:hover {
+    background-color: #004a8c;
+    transform: translateY(-2px);
+    border-color: var(--primary-color);
+    box-shadow: 0 5px 15px rgba(50, 161, 255, 0.2);
+}
+
+.btn-san:active {
+    transform: translateY(0);
+}
+
+/* Ajustes específicos para cada seção */
+.hero-text .btn-san {
+    margin-top: 2rem;
+    width: auto;
+}
+
+.demonstracao .btn-san {
+    margin-top: 3rem;
+    width: auto;
+}
+
+.testimonials .btn-san {
+    width: auto;
+}
+
+@media (max-width: 768px) {
+    .btn-san {
+        font-size: 0.85rem;
+        padding: 12px 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .btn-san {
+        font-size: 0.8rem;
+        padding: 10px 15px;
+    }
+}
+
+.gap-2 {
+    gap: 0.5rem;
+}
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.py-5 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+    .col-md-4 {
+        width: 33.333333%;
+    }
+    
+    .col-md-3 {
+        width: 25%;
+    }
+}
+
+@media (max-width: 768px) {
+    .testimonials h2 {
+        font-size: 2rem;
+        margin-bottom: 3rem;
+    }
+    
+    .testimonial-card {
+        padding: 1.5rem;
+    }
+    
+    .testimonial-img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .btn-san {
+        font-size: 0.8rem;
+        padding: 10px 15px;
+    }
+}
+
+/* Seção Contato */
+.sandeco-contato {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    color: var(--white);
+    position: relative;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.contato-content {
+    max-width: 1920px;
+    width: 100%;
+    height: 100vh;
+    background-image: url('../img/contato_background.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 1rem;
+    padding-left: 60px;
+    padding-right: 10%;
+    position: relative;
+    z-index: 2;
+}
+
+.contato-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding: 2rem;
+}
+
+.contato-text .titulo {
+    font-size: 2.8rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    text-align: left;
+    line-height: 1.2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.contato-text .descricao {
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 2;
+    opacity: 0.9;
+    text-align: left;
+    max-width: 600px;
+}
+
+.contato-image {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    overflow: visible;
+    transform: translateX(250px);
+    width: 100%;
+}
+
+.contato-image img {
+    max-width: none;
+    height: 90vh;
+    width: auto;
+    object-fit: contain;
+    object-position: center;
+    margin: 0;
+}
+
+.sandeco-contato::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(0,0,0,0.7) 0%, rgba(50, 161, 255, 0.3) 100%);
+    z-index: 1;
+}
+
+@media (max-width: 992px) {
+    .contato-content {
+        grid-template-columns: 1fr;
+        padding: 2rem;
+        height: auto;
+    }
+
+    .contato-text {
+        padding: 1rem;
+        align-items: center;
+        order: 1;
+    }
+
+    .contato-text .titulo {
+        font-size: 2rem;
+        text-align: center;
+        align-items: center;
+    }
+
+    .contato-text .descricao {
+        text-align: center;
+        font-size: 1.1rem;
+        padding: 0 1rem;
+    }
+
+    .contato-image {
+        width: 100%;
+        height: 50vh;
+        justify-content: center;
+        transform: none;
+        overflow: hidden;
+        order: 2;
+    }
+
+    .contato-image img {
+        height: 100%;
+        width: auto;
+        object-position: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .sandeco-contato {
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .contato-text .titulo {
+        font-size: 1.8rem;
+    }
+
+    .contato-text .descricao {
+        font-size: 1rem;
+    }
+
+    .contato-image {
+        height: 40vh;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px; /* Altura do header + padding extra */
 } 
