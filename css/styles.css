@@ -1189,6 +1189,27 @@ h1.hero-title {
         padding: 0 1rem;
     }
 
+    .escritor-content{  
+        background-image: url('../img/responsivo/escritor-responsivo.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+    }
+
+    .escritor-image{
+        display: none;
+    }
+
+    .escritor-text .titulo {
+        font-size: 1.5rem;
+    }
+    .escritor-text .descricao {
+        font-size: 1rem;
+        
+    }
 }
 
 /* ==========================================================================
