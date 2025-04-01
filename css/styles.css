@@ -1,3 +1,6 @@
+/* ==========================================================================
+   1. Variáveis e Reset
+   ========================================================================== */
 :root {
     --primary-color: #32a1ff;
     --secondary-color: #FFD43B;
@@ -13,6 +16,11 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
     line-height: 1.0;
@@ -20,9 +28,10 @@ body {
     background-color: #1c1c1c;
 }
 
-.cor_dominante {
-    color: #32a1ff;
-}
+/* ==========================================================================
+   2. Utilitários
+   ========================================================================== */
+.cor_dominante { color: #32a1ff; }
 
 .container {
     max-width: 1200px;
@@ -30,7 +39,19 @@ body {
     padding: 0 20px;
 }
 
-/* Header */
+.container-lg {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.gap-2 { gap: 0.5rem; }
+.mx-auto { margin: 0 auto; }
+.py-5 { padding: 3rem 0; }
+
+/* ==========================================================================
+   3. Header e Navegação
+   ========================================================================== */
 .header {
     background-color: #222222;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -78,6 +99,79 @@ body {
     background-color: rgba(50, 161, 255, 0.1);
 }
 
+/* Menu Toggle (Hamburger) */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 8px;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1001;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+.menu-toggle span {
+    width: 30px;
+    height: 3px;
+    background-color: var(--white);
+    transition: all 0.3s ease;
+    transform-origin: center;
+}
+
+.menu-toggle.active span:first-child {
+    transform: translateY(11px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:last-child {
+    transform: translateY(-11px) rotate(-45deg);
+}
+
+/* ==========================================================================
+   4. Componentes
+   ========================================================================== */
+/* Botões */
+.btn-san {
+    position: relative;
+    font-size: 0.9rem;
+    font-weight: 400;    
+    opacity: 0.9;    
+    background-color: #005fb1;
+    padding: 15px 25px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--white);
+    display: inline-block;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    text-align: center;
+}
+
+.btn-san:hover {
+    background-color: #004a8c;
+    transform: translateY(-2px);
+    border-color: var(--primary-color);
+    box-shadow: 0 5px 15px rgba(50, 161, 255, 0.2);
+}
+
+.btn-san:active {
+    transform: translateY(0);
+}
+
+.btn-san-hero {
+    margin-left: 2rem;
+    width: 100px;
+}
+
+/* ==========================================================================
+   5. Seções
+   ========================================================================== */
 /* Hero Section */
 .hero {
     height: 100vh;
@@ -108,7 +202,6 @@ body {
     padding-top: 120px;
     position: relative;
 }
-
 
 .hero h1 {
     font-size: 3.5rem;
@@ -183,7 +276,6 @@ h1.hero-title {
 .hero-text h3 {
     font-size: 1.2rem;
     line-height: 1.4;
-
     font-weight: 300;
     color: #f5f5f5f2;
     text-align: center;
@@ -208,7 +300,6 @@ h1.hero-title {
     height: auto;
     margin: 2rem 0;
 }
-
 
 .hero-evento {
     position: relative;
@@ -238,451 +329,6 @@ h1.hero-title {
     transform: translateY(0);
 }
 
-/* Responsividade HERO para telas menores que 576px */
-@media (max-width: 576px) {
-
-    .header{
-        background-color: var(--bg-color);
-    }
-
-    .hero{
-        background-image: url('../img/responsivo/hero-responsivo.jpg');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        height: 100vh;
-        width: 100%;
-        font-size: 0.8rem;
-        padding: 10px 20px;
-    }
-}
-
-
-
-.cta-button {
-    display: inline-block;
-    padding: 1rem 2rem;
-    background-color: var(--secondary-color);
-    color: var(--text-color);
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: 500;
-    transition: transform 0.3s ease;
-}
-
-.cta-button:hover {
-    transform: translateY(-3px);
-}
-
-/* Sobre Section */
-.sobre {
-    padding: 5rem 0;
-    background-color: var(--light-bg);
-}
-
-.sobre h2 {
-    text-align: center;
-    margin-bottom: 3rem;
-    color: var(--primary-color);
-}
-
-.cards-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-}
-
-.card {
-    background: var(--white);
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-}
-
-/* Cursos Section */
-.cursos {
-    padding: 5rem 0;
-}
-
-.cursos h2 {
-    text-align: center;
-    margin-bottom: 3rem;
-    color: var(--primary-color);
-}
-
-.cursos-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-.curso-card {
-    background: var(--white);
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-    text-align: center;
-    transition: transform 0.3s ease;
-}
-
-.curso-card:hover {
-    transform: translateY(-5px);
-}
-
-.curso-button {
-    display: inline-block;
-    padding: 0.8rem 1.5rem;
-    background-color: var(--primary-color);
-    color: var(--white);
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 1rem;
-    transition: background-color 0.3s ease;
-}
-
-.curso-button:hover {
-    background-color: #1a3b5d;
-}
-
-/* Contato Section */
-.contato {
-    padding: 5rem 0;
-    background-color: var(--light-bg);
-}
-
-.contato h2 {
-    text-align: center;
-    margin-bottom: 3rem;
-    color: var(--primary-color);
-}
-
-.contato-form {
-    max-width: 600px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.contato-form input,
-.contato-form textarea {
-    padding: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-family: inherit;
-}
-
-.contato-form textarea {
-    height: 150px;
-    resize: vertical;
-}
-
-.submit-button {
-    padding: 1rem;
-    background-color: var(--primary-color);
-    color: var(--white);
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: 500;
-    transition: background-color 0.3s ease;
-}
-
-.submit-button:hover {
-    background-color: #1a3b5d;
-}
-
-/* Footer */
-.footer {
-    background-color: #0f1111;
-    color: var(--white);
-    padding: 2rem 0;
-    text-align: center;
-}
-
-/* Responsividade Global */
-@media (max-width: 1200px) {
-    .container {
-        max-width: 960px;
-    }
-
-    .hero-text {
-        padding-left: 5em;
-    }
-
-    .hero-title {
-        font-size: 5em;
-    }
-
-    .hero-name-macedo {
-        font-size: 3.5rem;
-        margin-left: 200px;
-    }
-
-    .embaixador-content,
-    .escritor-content {
-        padding-left: 5%;
-        padding-right: 5%;
-    }
-
-    .nav-container {
-        padding: 1rem;
-    }
-
-    .nav-links {
-        gap: 1rem;
-    }
-
-    .nav-links a {
-        font-size: 0.85rem;
-        padding: 0.4rem 0.6rem;
-    }
-}
-
-@media (max-width: 992px) {
-    .container {
-        max-width: 720px;
-    }
-    
-    .hero-content {
-        flex-direction: column;
-        padding: 3rem 1.5rem 0 1.5rem;
-        background-image: none;
-        height: auto;
-    }
-
-    .hero-text {
-        padding: 4rem 0 0 0;
-    }
-
-    .hero-title {
-        font-size: 4em;
-    }
-
-    .hero-name-macedo {
-        font-size: 3rem;
-        margin-left: 0;
-    }
-
-    .hero-subtitle {
-        margin-left: 0;
-    }
-
-    .hero-image {
-        width: 100%;
-        height: 60vh;
-        margin-right: 0;
-    }
-
-    .embaixador-content,
-    .escritor-content {
-        grid-template-columns: 1fr;
-        height: auto;
-        min-height: 100vh;
-    }
-
-    .embaixador-image,
-    .escritor-image {
-        transform: none;
-        width: 100%;
-        height: 60vh;
-    }
-
-    .embaixador-text,
-    .escritor-text {
-        padding: 3rem;
-    }
-
-    .hero-text .btn-san {
-        margin-top: 1.5rem;
-        max-width: 300px;
-    }
-
-    .nav-links {
-        display: none;
-    }
-}
-
-@media (max-width: 768px) {
-    .container {
-        max-width: 540px;
-    }
-
-    .hero-title {
-        font-size: 3.5em;
-    }
-
-    .hero-name-macedo {
-        font-size: 2.5rem;
-    }
-
-    .hero-image {
-        height: 50vh;
-    }
-
-    .embaixador-text,
-    .escritor-text {
-        padding: 3rem 0 0 0;
-    }
-
-    .embaixador-text .titulo,
-    .escritor-text .titulo {
-        font-size: 2rem;
-    }
-
-    .embaixador-text .descricao,
-    .escritor-text .descricao {
-        font-size: 1.1rem;
-        text-align: center;
-        padding: 0 1rem;
-    }
-
-    .demonstracao h2 {
-        font-size: 2.2rem;
-        padding: 0 1rem;
-    }
-
-    .hero-text .btn-san {
-        margin-top: 1rem;
-        max-width: 250px;
-    }
-
-    .btn-san {
-        font-size: 0.85rem;
-        padding: 12px 20px;
-    }
-}
-
-@media (max-width: 576px) {
-    .header {
-        background-color: var(--primary-color);
-        position: fixed;
-        width: 100%;
-        top: 0;
-        z-index: 1000;
-    }
-
-    .nav-container {
-        padding: 0.5rem 1rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .logo {
-        font-size: 1.2rem;
-        color: var(--white);
-        text-decoration: none;
-    }
-
-    .menu-toggle {
-        display: flex;
-        position: relative;
-        z-index: 1001;
-    }
-
-    .nav-links {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba(0, 0, 0, 0.95);
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 2rem;
-        gap: 2rem;
-        z-index: 1000;
-        opacity: 0;
-        transition: opacity 0.3s ease;
-    }
-
-    .nav-links.active {
-        display: flex;
-        opacity: 1;
-    }
-
-    .nav-links a {
-        font-size: 1.2rem;
-        opacity: 0.8;
-        transition: opacity 0.3s ease;
-        padding: 0.5rem 1rem;
-        color: var(--white);
-        text-decoration: none;
-    }
-
-    .nav-links a:hover {
-        opacity: 1;
-        background-color: transparent;
-    }
-
-    .hero {
-        padding-top: 80px;
-        background-image: url('../img/responsivo/hero-responsivo.jpg');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        height: 100vh;
-        width: 100%;
-        font-size: 0.8rem;
-    }
-
-    .hero-content {
-        padding: 0 1rem;
-        height: auto;
-        min-height: 100vh;
-    }
-
-    .hero-text {
-        padding: 2rem 0;
-    }
-
-    .hero-title {
-        font-size: 2.5rem;
-        margin-left: 0;
-    }
-
-    .hero-name-macedo {
-        font-size: 2rem;
-        margin-left: 0;
-    }
-
-    .hero-subtitle {
-        margin-left: 0;
-        font-size: 1rem;
-    }
-
-    .hero-text h3 {
-        font-size: 0.9rem;
-        margin-left: 0;
-    }
-
-    .hero-image {
-        width: 100%;
-        margin-right: 0;
-        margin-top: 2rem;
-    }
-
-    .hero-image img {
-        max-width: 100%;
-        height: auto;
-    }
-}
-
-@media (max-width: 600px) {
-    .livros-grid {
-        grid-template-columns: 1fr;
-        padding: 0 1rem;
-    }
-}
-
 /* Sandeco Escritor Section */
 .sandeco-escritor {
     height: 100vh;
@@ -691,7 +337,6 @@ h1.hero-title {
     justify-content: center;
     text-align: left;
     color: var(--white);
-
     position: relative;
     overflow: hidden;
     background-color: #000;
@@ -1219,50 +864,44 @@ h1.hero-title {
 /* Testimonials Section */
 .testimonials {
     background-color: #090909;
-    padding-top: 2rem;
-    padding-bottom: 1rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding: 4rem 2rem;
     margin: 0 auto;
-}
-
-.container-lg {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
+    overflow: hidden;
+    text-align: center;
 }
 
 .testimonials h2 {
     font-size: 2.8rem;
     margin-bottom: 4rem;
     color: var(--white);
+    text-align: center;
 }
 
 .testimonials .highlight {
     color: var(--primary-color);
 }
 
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 -15px;
+.testimonials-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 1rem;
 }
 
-.col-12 {
-    width: 100%;
-    padding: 0 15px;
+.row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin: 0 auto;
 }
 
 .col-md-4 {
     width: 100%;
-    padding: 0 15px;
 }
 
 .testimonial-card {
     background-color: #101010;
     border-radius: 15px;
     padding: 2rem;
-    margin-bottom: 2rem;
     text-align: center;
     height: 100%;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -1301,91 +940,40 @@ h1.hero-title {
     margin: 0;
 }
 
-.btn-san {
-    position: relative;
-    font-size: 0.9rem;
-    font-weight: 300;    
-    opacity: 0.9;    
-    background-color: #005fb1;
-    padding: 15px 25px;
-    border-radius: 10px;
-    cursor: pointer;
-    text-decoration: none;
-    color: var(--white);
-    display: inline-block;
-    transition: all 0.3s ease;
-    border: 2px solid transparent;
-    text-align: center;
-}
-
-.btn-san:hover {
-    background-color: #004a8c;
-    transform: translateY(-2px);
-    border-color: var(--primary-color);
-    box-shadow: 0 5px 15px rgba(50, 161, 255, 0.2);
-}
-
-.btn-san:active {
-    transform: translateY(0);
-}
-
-/* Ajustes específicos para cada seção */
-.hero-text .btn-san {
-    margin-top: 2rem;
-    width: auto;
-}
-
 .demonstracao .btn-san {
     margin-top: 3rem;
     width: auto;
 }
 
+.testimonials .btn-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
 .testimonials .btn-san {
-    width: auto;
+    margin: 0 auto;
+    display: inline-block;
 }
 
-@media (max-width: 768px) {
-    .btn-san {
-        font-size: 0.85rem;
-        padding: 12px 20px;
-    }
-}
-
-@media (max-width: 576px) {
-    .btn-san {
-        font-size: 0.8rem;
-        padding: 10px 15px;
-    }
-}
-
-.gap-2 {
-    gap: 0.5rem;
-}
-
-.mx-auto {
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.py-5 {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-}
-
-@media (min-width: 768px) {
-    .col-md-4 {
-        width: 33.333333%;
+@media (max-width: 992px) {
+    .row {
+        grid-template-columns: repeat(2, 1fr);
     }
     
-    .col-md-3 {
-        width: 25%;
+    .testimonials .btn-container {
+        margin-top: 2.5rem;
     }
 }
 
 @media (max-width: 768px) {
-    .testimonials h2 {
-        font-size: 2rem;
-        margin-bottom: 3rem;
+    .testimonials {
+        padding: 3rem 1rem;
+    }
+    
+    .testimonials .btn-container {
+        margin-top: 2rem;
     }
     
     .testimonial-card {
@@ -1396,10 +984,17 @@ h1.hero-title {
         width: 100px;
         height: 100px;
     }
+}
 
-    .btn-san {
-        font-size: 0.8rem;
-        padding: 10px 15px;
+@media (max-width: 576px) {
+    .row {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .testimonial-card {
+        max-width: 400px;
+        margin: 0 auto;
     }
 }
 
@@ -1552,41 +1147,6 @@ h1.hero-title {
     }
 }
 
-html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 80px; /* Altura do header + padding extra */
-}
-
-/* Menu Toggle (Hamburger) */
-.menu-toggle {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
-    padding: 10px;
-    z-index: 1001;
-}
-
-.menu-toggle span {
-    width: 25px;
-    height: 2px;
-    background-color: var(--white);
-    transition: all 0.3s ease;
-    transform-origin: left;
-}
-
-.menu-toggle.active span:first-child {
-    transform: rotate(45deg);
-}
-
-.menu-toggle.active span:nth-child(2) {
-    opacity: 0;
-}
-
-.menu-toggle.active span:last-child {
-    transform: rotate(-45deg);
-}
-
 @media (max-width: 576px) {
     .header {
         background-color: var(--primary-color);
@@ -1594,10 +1154,14 @@ html {
         width: 100%;
         top: 0;
         z-index: 1000;
+        height: 60px;
+        display: flex;
+        align-items: center;
     }
 
     .nav-container {
-        padding: 0.5rem 1rem;
+        padding: 0 1rem;
+        width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -1606,13 +1170,11 @@ html {
     .logo {
         font-size: 1.2rem;
         color: var(--white);
-        text-decoration: none;
+        z-index: 1001;
     }
 
     .menu-toggle {
         display: flex;
-        position: relative;
-        z-index: 1001;
     }
 
     .nav-links {
@@ -1622,15 +1184,15 @@ html {
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(0, 0, 0, 0.95);
+        background: rgba(0, 0, 0, 0.98);
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding: 2rem;
-        gap: 2rem;
-        z-index: 1000;
+        padding: 4rem 2rem;
+        gap: 1.5rem;
+        z-index: 999;
         opacity: 0;
-        transition: opacity 0.3s ease;
+        transition: all 0.3s ease;
     }
 
     .nav-links.active {
@@ -1638,39 +1200,50 @@ html {
         opacity: 1;
     }
 
+    .nav-links li {
+        list-style: none;
+        text-align: center;
+        width: 100%;
+    }
+
     .nav-links a {
         font-size: 1.2rem;
-        opacity: 0.8;
+        font-weight: 400;
+        opacity: 0.9;
         transition: opacity 0.3s ease;
-        padding: 0.5rem 1rem;
+        padding: 0.8rem 1.2rem;
         color: var(--white);
         text-decoration: none;
+        display: block;
+        width: 100%;
     }
 
     .nav-links a:hover {
         opacity: 1;
-        background-color: transparent;
     }
 
     .hero {
-        padding-top: 80px;
-        background-image: url('../img/responsivo/hero-responsivo.jpg');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        height: 100vh;
-        width: 100%;
-        font-size: 0.8rem;
+        padding-top: 60px;
     }
 
     .hero-content {
         padding: 0 1rem;
         height: auto;
         min-height: 100vh;
+        display: flex;
+        flex-direction: column;
     }
 
     .hero-text {
         padding: 2rem 0;
+        order: 2;
+    }
+
+    .hero-image {
+        width: 100%;
+        margin-right: 0;
+        margin-top: 0;
+        order: 1;
     }
 
     .hero-title {
@@ -1693,14 +1266,423 @@ html {
         margin-left: 0;
     }
 
+    .btn-san {
+        font-size: 0.8rem;
+        padding: 10px 15px;
+    }
+
+    .livros-grid {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+    }
+}
+
+/* ==========================================================================
+   6. Media Queries
+   ========================================================================== */
+
+/* Desktop Large (1200px) */
+@media (max-width: 1200px) {
+    .container {
+        max-width: 960px;
+    }
+
+    .hero-text {
+        padding-left: 5em;
+    }
+
+    .hero-title {
+        font-size: 5em;
+    }
+
+    .hero-name-macedo {
+        font-size: 3.5rem;
+        margin-left: 200px;
+    }
+
+    .embaixador-content,
+    .escritor-content {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .nav-container {
+        padding: 1rem;
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
+
+    .nav-links a {
+        font-size: 0.85rem;
+        padding: 0.4rem 0.6rem;
+    }
+
+    .livros-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Desktop (992px) */
+@media (max-width: 992px) {
+    .container {
+        max-width: 720px;
+    }
+    
+    .hero-content {
+        flex-direction: column;
+        padding: 2rem 1.5rem 0 1.5rem;
+        background-image: none;
+        height: auto;
+    }
+
+    .hero-text {
+        padding: 2rem 0 0 0;
+    }
+
+    .hero-title {
+        font-size: 4em;
+    }
+
+    .hero-name-macedo {
+        font-size: 3rem;
+        margin-left: 0;
+    }
+
+    .hero-subtitle {
+        margin-left: 0;
+    }
+
+    .hero-image {
+        width: 100%;
+        height: 60vh;
+        margin-right: 0;
+    }
+
+    .embaixador-content,
+    .escritor-content {
+        grid-template-columns: 1fr;
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .embaixador-image,
+    .escritor-image {
+        transform: none;
+        width: 100%;
+        height: 60vh;
+    }
+
+    .embaixador-text,
+    .escritor-text {
+        padding: 3rem;
+    }
+
+    .hero-text .btn-san {
+        margin-top: 1.5rem;
+        max-width: 300px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .contato-content {
+        grid-template-columns: 1fr;
+        padding: 2rem;
+        height: auto;
+    }
+
+    .contato-text {
+        padding: 1rem;
+        align-items: center;
+        order: 1;
+    }
+
+    .contato-text .titulo {
+        font-size: 2rem;
+        text-align: center;
+        align-items: center;
+    }
+
+    .contato-text .descricao {
+        text-align: center;
+        font-size: 1.1rem;
+        padding: 0 1rem;
+    }
+
+    .contato-image {
+        width: 100%;
+        height: 50vh;
+        justify-content: center;
+        transform: none;
+        overflow: hidden;
+        order: 2;
+    }
+}
+
+/* Tablet (768px) */
+@media (max-width: 768px) {
+    .container {
+        max-width: 540px;
+    }
+
+    .hero-title {
+        font-size: 3.5em;
+    }
+
+    .hero-name-macedo {
+        font-size: 2.5rem;
+    }
+
+    .hero-image {
+        height: 50vh;
+    }
+
+    .embaixador-text,
+    .escritor-text {
+        padding: 3rem 0 0 0;
+    }
+
+    .embaixador-text .titulo,
+    .escritor-text .titulo {
+        font-size: 2rem;
+    }
+
+    .embaixador-text .descricao,
+    .escritor-text .descricao {
+        font-size: 1.1rem;
+        text-align: center;
+        padding: 0 1rem;
+    }
+
+    .demonstracao h2 {
+        font-size: 2.2rem;
+        padding: 0 1rem;
+    }
+
+    .hero-text .btn-san {
+        margin-top: 1rem;
+        max-width: 250px;
+    }
+
+    .btn-san {
+        font-size: 0.85rem;
+        padding: 12px 20px;
+    }
+
+    .testimonials h2 {
+        font-size: 2rem;
+        margin-bottom: 3rem;
+    }
+    
+    .testimonial-card {
+        padding: 1.5rem;
+    }
+    
+    .testimonial-img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .col-md-4 {
+        width: 33.333333%;
+    }
+    
+    .col-md-3 {
+        width: 25%;
+    }
+
+    .sandeco-contato {
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .contato-text .titulo {
+        font-size: 1.8rem;
+    }
+
+    .contato-text .descricao {
+        font-size: 1rem;
+    }
+
+    .contato-image {
+        height: 40vh;
+    }
+}
+
+/* Mobile (576px) */
+@media (max-width: 576px) {
+    .header {
+        background-color: var(--primary-color);
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+        height: 60px;
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-container {
+        padding: 0 1rem;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+        color: var(--white);
+        z-index: 1001;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.98);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 4rem 2rem;
+        gap: 1.5rem;
+        z-index: 999;
+        opacity: 0;
+        transition: all 0.3s ease;
+    }
+
+    .nav-links.active {
+        display: flex;
+        opacity: 1;
+    }
+
+    .nav-links li {
+        list-style: none;
+        text-align: center;
+        width: 100%;
+    }
+
+    .nav-links a {
+        font-size: 1.2rem;
+        font-weight: 400;
+        opacity: 0.9;
+        transition: opacity 0.3s ease;
+        padding: 0.8rem 1.2rem;
+        color: var(--white);
+        text-decoration: none;
+        display: block;
+        width: 100%;
+    }
+
+    .nav-links a:hover {
+        opacity: 1;
+    }
+
+    .hero {
+        padding-top: 60px;
+    }
+
+    .hero-content {
+        padding: 0 1rem;
+        height: auto;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hero-text {
+        padding: 2rem 0;
+        order: 2;
+    }
+
     .hero-image {
         width: 100%;
         margin-right: 0;
-        margin-top: 2rem;
+        margin-top: 0;
+        order: 1;
     }
 
-    .hero-image img {
-        max-width: 100%;
-        height: auto;
+    .hero-title {
+        font-size: 2.5rem;
+        margin-left: 0;
     }
+
+    .hero-name-macedo {
+        font-size: 2rem;
+        margin-left: 0;
+    }
+
+    .hero-subtitle {
+        margin-left: 0;
+        font-size: 1rem;
+    }
+
+    .hero-text h3 {
+        font-size: 0.9rem;
+        margin-left: 0;
+    }
+
+    .btn-san {
+        font-size: 0.8rem;
+        padding: 10px 15px;
+    }
+
+    .livros-grid {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+    }
+}
+
+/* ==========================================================================
+   7. Animações
+   ========================================================================== */
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-420px * 9 - 0.5rem * 9)); }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulseGradient {
+    0% { opacity: 0.5; }
+    50% { opacity: 0.8; }
+    100% { opacity: 0.5; }
+}
+
+.footer {
+    background-color: #090909;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.footer .container {
+    width: 100%;
+}
+
+.footer p {
+    margin: 0;
+    color: var(--text-color);
+    opacity: 0.8;
 } 
