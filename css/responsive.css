@@ -193,9 +193,43 @@
     }
 
     /* Livros Section */
+    .livros {
+        text-align: center;
+        padding: 1rem 1rem;
+    }
+
+    .livros h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+
     .livros-grid {
-        grid-template-columns: 1fr;
-        padding: 0 1rem;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .livro-card {
+        width: 100%;
+    }
+
+    .livro-card img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .livro-card .titulo {
+        font-size: 1rem;
+        margin-top: 0.5rem;
+        text-align: center;
+    }
+
+    .livro-card .descricao {
+        font-size: 0.9rem;
+        margin-top: 0.5rem;
+        text-align: center;
     }
 
     /* Escritor Section */
