@@ -1,0 +1,134 @@
+@media (min-width: 1200px) {
+    /* Header e Navegação */
+    .nav-container {
+        padding: 0 4rem;
+    }
+
+    .logo {
+        font-size: 1.8rem;
+    }
+
+    .nav-links a {
+        font-size: 1.1rem;
+        padding: 0.7rem 1.5rem;
+    }
+
+    /* Hero Section */
+    .hero-content {
+        padding: 4rem;
+        gap: 4rem;
+    }
+
+    .hero-text {
+        padding: 4rem;
+        max-width: 700px;
+    }
+
+    h4.hero-subtitle {
+        font-size: 2rem;
+        margin-left: 150px;
+    }
+
+    h1.hero-title {
+        font-size: 8rem;
+    }
+
+    .hero-name-macedo {
+        font-size: 1.6rem;
+        margin-left: 70px;
+    }
+
+    /* Escritor Section */
+    .escritor-content {
+        padding: 4rem;
+    }
+
+    .escritor-text {
+        padding: 4rem;
+        max-width: 700px;
+    }
+
+    .escritor-text .titulo {
+        font-size: 3.5rem;
+    }
+
+    .escritor-text .descricao {
+        font-size: 1.3rem;
+        line-height: 2;
+    }
+
+    /* Livros Section */
+    .livros-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 3rem;
+        padding: 4rem;
+    }
+
+    .livros h2 {
+        font-size: 3rem;
+    }
+
+    /* Embaixador Section */
+    .embaixador-text {
+        padding: 4rem;
+        max-width: 700px;
+    }
+
+    .embaixador-text .titulo {
+        font-size: 3.5rem;
+    }
+
+    .embaixador-text .descricao {
+        font-size: 1.3rem;
+        line-height: 2;
+    }
+
+    /* Testimonials Section */
+    .testimonial-card {
+        padding: 3rem;
+    }
+
+    .testimonial-text {
+        font-size: 1.2rem;
+        line-height: 1.8;
+    }
+
+    /* Contato Section */
+    .contato-text {
+        padding: 4rem;
+        max-width: 700px;
+    }
+
+    .contato-text .titulo {
+        font-size: 3.5rem;
+    }
+
+    .contato-text .descricao {
+        font-size: 1.3rem;
+        line-height: 2;
+    }
+
+    /* Form Section */
+    .form-contato-container {
+        max-width: 1000px;
+        padding: 4rem;
+    }
+
+    .form-contato h2 {
+        font-size: 3rem;
+    }
+
+    .form-group label {
+        font-size: 1.1rem;
+    }
+
+    .form-group input,
+    .form-group select {
+        padding: 1.2rem;
+    }
+
+    .form-submit {
+        padding: 1.2rem;
+        font-size: 1.2rem;
+    }
+} 

@@ -1,0 +1,112 @@
+@media (min-width: 768px) and (max-width: 991px) {
+    /* Header e Navegação */
+    .nav-container {
+        padding: 0 2rem;
+    }
+
+    .logo {
+        font-size: 1.4rem;
+    }
+
+    /* Hero Section */
+    .hero-content {
+        padding: 2rem;
+        gap: 2rem;
+    }
+
+    .hero-text {
+        padding: 2rem;
+    }
+
+    h4.hero-subtitle {
+        font-size: 1.5rem;
+        margin-left: 100px;
+    }
+
+    h1.hero-title {
+        font-size: 6rem;
+    }
+
+    .hero-name-macedo {
+        font-size: 1.2rem;
+        margin-left: 40px;
+    }
+
+    /* Escritor Section */
+    .escritor-content {
+        padding: 2rem;
+    }
+
+    .escritor-text {
+        padding: 2rem;
+    }
+
+    .escritor-text .titulo {
+        font-size: 2.5rem;
+    }
+
+    .escritor-text .descricao {
+        font-size: 1.1rem;
+    }
+
+    /* Livros Section */
+    .livros-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+        padding: 2rem;
+    }
+
+    /* Embaixador Section */
+    .embaixador-text {
+        padding: 2rem;
+    }
+
+    .embaixador-text .titulo {
+        font-size: 2.5rem;
+    }
+
+    .embaixador-text .descricao {
+        font-size: 1.1rem;
+    }
+
+    /* Testimonials Section */
+    .testimonial-card {
+        padding: 2rem;
+    }
+
+    .testimonial-text {
+        font-size: 1rem;
+    }
+
+    /* Contato Section */
+    .contato-text {
+        padding: 2rem;
+    }
+
+    .contato-text .titulo {
+        font-size: 2.5rem;
+    }
+
+    .contato-text .descricao {
+        font-size: 1.1rem;
+    }
+
+    /* Form Section */
+    .form-contato-container {
+        max-width: 720px;
+        padding: 2rem;
+    }
+
+    .form-contato h2 {
+        font-size: 2.2rem;
+    }
+
+    .form-group label {
+        font-size: 0.9rem;
+    }
+
+    .form-group input,
+    .form-group select {
+        padding: 0.9rem;
+    }
+} 
