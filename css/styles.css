@@ -435,37 +435,7 @@ h1.hero-title {
     z-index: 1;
 }
 
-@media (max-width: 768px) {
-    .escritor-content {
-        grid-template-columns: 1fr;
-        padding: 2rem;
-    }
 
-    .escritor-text {
-        padding: 1rem;
-        align-items: center;
-    }
-
-    .escritor-text .titulo {
-        font-size: 1.5rem;
-        text-align: center;
-        align-items: center;
-    }
-
-    .escritor-text .descricao {
-        font-size: 1rem;
-        text-align: center;
-    }
-
-    .escritor-image {
-        height: 50vh;
-        justify-content: center;
-    }
-
-    .escritor-image img {
-        height: 100%;
-    }
-}
 
 /* Removendo a seção revolution */
 .revolution,
@@ -660,24 +630,7 @@ h1.hero-title {
     background-color: #1a3b5d;
 }
 
-@media (max-width: 1200px) {
-    .livros-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
 
-@media (max-width: 900px) {
-    .livros-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 600px) {
-    .livros-grid {
-        grid-template-columns: 1fr;
-        padding: 0 1rem;
-    }
-}
 
 /* Sandeco Embaixador Section */
 .sandeco-embaixador {
@@ -775,42 +728,7 @@ h1.hero-title {
     z-index: 1;
 }
 
-@media (max-width: 768px) {
-    .embaixador-content {
-        grid-template-columns: 1fr;
-        padding: 2rem;
-    }
 
-    .embaixador-text {
-        padding: 1rem;
-        align-items: center;
-    }
-
-    .embaixador-text .titulo {
-        font-size: 1.5rem;
-        text-align: center;
-        align-items: center;
-    }
-
-    .embaixador-text .descricao {
-        font-size: 1rem;
-        text-align: center;
-    }
-
-    .embaixador-image {
-        width: 100%;
-        height: 50vh;
-        justify-content: center;
-        transform: none;
-        overflow: hidden;
-    }
-
-    .embaixador-image img {
-        height: 100%;
-        width: auto;
-        object-position: center;
-    }
-}
 
 /* Seção Demonstração */
 .demonstracao {
@@ -850,16 +768,7 @@ h1.hero-title {
     border: none;
 }
 
-@media (max-width: 768px) {
-    .demonstracao {
-        padding: 4rem 1rem;
-    }
 
-    .demonstracao h2 {
-        font-size: 2rem;
-        margin-bottom: 2rem;
-    }
-}
 
 /* Testimonials Section */
 .testimonials {
@@ -957,109 +866,6 @@ h1.hero-title {
     display: inline-block;
 }
 
-@media (max-width: 992px) {
-    .row {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .testimonials .btn-container {
-        margin-top: 2.5rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .testimonials {
-        padding: 3rem 1rem;
-    }
-    
-    .testimonials .btn-container {
-        margin-top: 2rem;
-    }
-    
-    .testimonial-card {
-        padding: 1.5rem;
-    }
-    
-    .testimonial-img {
-        width: 100px;
-        height: 100px;
-    }
-}
-
-@media (max-width: 576px) {
-    .row {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-
-    .testimonial-card {
-        max-width: 400px;
-        margin: 0 auto;
-    }
-
-    .hero {
-        padding-top: 80px;
-        background-image: url('../img/responsivo/hero-responsivo.jpg');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        height: 100vh;
-        width: 100%;
-        font-size: 0.8rem;
-    }
-
-    .hero-content {
-        padding: 0 1rem;
-        height: auto;
-        min-height: 100vh;
-    }
-
-    .hero-text {
-        padding: 2rem 0;
-    }
-
-    .hero-image {
-        width: 100%;
-        margin-right: 0;
-        margin-top: 2rem;
-    }
-
-    .hero-image img {
-        max-width: 100%;
-        height: auto;
-    }
-
-    .hero-title {
-        font-size: 2.5rem;
-        margin-left: 0;
-    }
-
-    .hero-name-macedo {
-        font-size: 2rem;
-        margin-left: 0;
-    }
-
-    .hero-subtitle {
-        margin-left: 0;
-        font-size: 1rem;
-    }
-
-    .hero-text h3 {
-        font-size: 0.9rem;
-        margin-left: 0;
-    }
-
-    .btn-san {
-        font-size: 0.8rem;
-        padding: 10px 15px;
-    }
-
-    .livros-grid {
-        grid-template-columns: 1fr;
-        padding: 0 1rem;
-    }
-}
-
 /* Seção Contato */
 .sandeco-contato {
     height: 80vh;
@@ -1149,435 +955,12 @@ h1.hero-title {
     z-index: 1;
 }
 
-@media (max-width: 992px) {
-    .contato-content {
-        grid-template-columns: 1fr;
-        padding: 2rem;
-        height: auto;
-    }
 
-    .contato-text {
-        padding: 1rem;
-        align-items: center;
-        order: 1;
-    }
-
-    .contato-text .titulo {
-        font-size: 2rem;
-        text-align: center;
-        align-items: center;
-    }
-
-    .contato-text .descricao {
-        text-align: center;
-        font-size: 1.1rem;
-        padding: 0 1rem;
-    }
-
-    .contato-image {
-        width: 100%;
-        height: 50vh;
-        justify-content: center;
-        transform: none;
-        overflow: hidden;
-        order: 2;
-    }
-
-    .contato-image img {
-        height: 100%;
-        width: auto;
-        object-position: center;
-    }
-}
-
-@media (max-width: 768px) {
-    .sandeco-contato {
-        height: auto;
-        min-height: 100vh;
-    }
-
-    .contato-text .titulo {
-        font-size: 1.8rem;
-    }
-
-    .contato-text .descricao {
-        font-size: 1rem;
-    }
-
-    .contato-image {
-        height: 40vh;
-    }
-}
-
-@media (max-width: 576px) {
-    .header {
-        background-color: var(--primary-color);
-        position: fixed;
-        width: 100%;
-        top: 0;
-        z-index: 1000;
-        height: 60px;
-        display: flex;
-        align-items: center;
-    }
-
-    .nav-container {
-        padding: 0 1rem;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .logo {
-        font-size: 1.2rem;
-        color: var(--white);
-        z-index: 1001;
-    }
-
-    .menu-toggle {
-        display: flex;
-    }
-
-    .nav-links {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba(0, 0, 0, 0.98);
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 4rem 2rem;
-        gap: 1.5rem;
-        z-index: 999;
-        opacity: 0;
-        transition: all 0.3s ease;
-    }
-
-    .nav-links.active {
-        display: flex;
-        opacity: 1;
-    }
-
-    .nav-links li {
-        list-style: none;
-        text-align: center;
-        width: 100%;
-    }
-
-    .nav-links a {
-        font-size: 1.2rem;
-        font-weight: 400;
-        opacity: 0.9;
-        transition: opacity 0.3s ease;
-        padding: 0.8rem 1.2rem;
-        color: var(--white);
-        text-decoration: none;
-        display: block;
-        width: 100%;
-    }
-
-    .nav-links a:hover {
-        opacity: 1;
-    }
-
-    .hero {
-        padding-top: 60px;
-    }
-
-    .hero-content {
-        padding: 0 1rem;
-        height: auto;
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .hero-text {
-        padding: 2rem 0;
-        order: 2;
-    }
-
-    .hero-image {
-        width: 100%;
-        margin-right: 0;
-        margin-top: 0;
-        order: 1;
-    }
-
-    .hero-title {
-        font-size: 2.5rem;
-        margin-left: 0;
-    }
-
-    .hero-name-macedo {
-        font-size: 2rem;
-        margin-left: 0;
-    }
-
-    .hero-subtitle {
-        margin-left: 0;
-        font-size: 1rem;
-    }
-
-    .hero-text h3 {
-        font-size: 0.9rem;
-        margin-left: 0;
-    }
-
-    .btn-san {
-        font-size: 0.8rem;
-        padding: 10px 15px;
-    }
-
-    .livros-grid {
-        grid-template-columns: 1fr;
-        padding: 0 1rem;
-    }
-}
-
-/* ==========================================================================
-   6. Media Queries
-   ========================================================================== */
-
-/* Desktop Large (1200px) */
-@media (max-width: 1200px) {
-    .container {
-        max-width: 960px;
-    }
-
-    .hero-text {
-        padding-left: 5em;
-    }
-
-    .hero-title {
-        font-size: 5em;
-    }
-
-    .hero-name-macedo {
-        font-size: 3.5rem;
-        margin-left: 200px;
-    }
-
-    .embaixador-content,
-    .escritor-content {
-        padding-left: 5%;
-        padding-right: 5%;
-    }
-
-    .nav-container {
-        padding: 1rem;
-    }
-
-    .nav-links {
-        gap: 1rem;
-    }
-
-    .nav-links a {
-        font-size: 0.85rem;
-        padding: 0.4rem 0.6rem;
-    }
-
-    .livros-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-/* Desktop (992px) */
-@media (max-width: 992px) {
-    .container {
-        max-width: 720px;
-    }
-    
-    .hero-content {
-        flex-direction: column;
-        padding: 2rem 1.5rem 0 1.5rem;
-        background-image: none;
-        height: auto;
-    }
-
-    .hero-text {
-        padding: 2rem 0 0 0;
-    }
-
-    .hero-title {
-        font-size: 4em;
-    }
-
-    .hero-name-macedo {
-        font-size: 3rem;
-        margin-left: 0;
-    }
-
-    .hero-subtitle {
-        margin-left: 0;
-    }
-
-    .hero-image {
-        width: 100%;
-        height: 60vh;
-        margin-right: 0;
-    }
-
-    .embaixador-content,
-    .escritor-content {
-        grid-template-columns: 1fr;
-        height: auto;
-        min-height: 100vh;
-    }
-
-    .embaixador-image,
-    .escritor-image {
-        transform: none;
-        width: 100%;
-        height: 60vh;
-    }
-
-    .embaixador-text,
-    .escritor-text {
-        padding: 3rem;
-    }
-
-    .hero-text .btn-san {
-        margin-top: 1.5rem;
-        max-width: 300px;
-    }
-
-    .nav-links {
-        display: none;
-    }
-
-    .contato-content {
-        grid-template-columns: 1fr;
-        padding: 2rem;
-        height: auto;
-    }
-
-    .contato-text {
-        padding: 1rem;
-        align-items: center;
-        order: 1;
-    }
-
-    .contato-text .titulo {
-        font-size: 2rem;
-        text-align: center;
-        align-items: center;
-    }
-
-    .contato-text .descricao {
-        text-align: center;
-        font-size: 1.1rem;
-        padding: 0 1rem;
-    }
-
-    .contato-image {
-        width: 100%;
-        height: 50vh;
-        justify-content: center;
-        transform: none;
-        overflow: hidden;
-        order: 2;
-    }
-}
-
-/* Tablet (768px) */
-@media (max-width: 768px) {
-    .container {
-        max-width: 540px;
-    }
-
-    .hero-title {
-        font-size: 3.5em;
-    }
-
-    .hero-name-macedo {
-        font-size: 2.5rem;
-    }
-
-    .hero-image {
-        height: 50vh;
-    }
-
-    .embaixador-text,
-    .escritor-text {
-        padding: 3rem 0 0 0;
-    }
-
-    .embaixador-text .titulo,
-    .escritor-text .titulo {
-        font-size: 2rem;
-    }
-
-    .embaixador-text .descricao,
-    .escritor-text .descricao {
-        font-size: 1.1rem;
-        text-align: center;
-        padding: 0 1rem;
-    }
-
-    .demonstracao h2 {
-        font-size: 2.2rem;
-        padding: 0 1rem;
-    }
-
-    .hero-text .btn-san {
-        margin-top: 1rem;
-        max-width: 250px;
-    }
-
-    .btn-san {
-        font-size: 0.85rem;
-        padding: 12px 20px;
-    }
-
-    .testimonials h2 {
-        font-size: 2rem;
-        margin-bottom: 3rem;
-    }
-    
-    .testimonial-card {
-        padding: 1.5rem;
-    }
-    
-    .testimonial-img {
-        width: 100px;
-        height: 100px;
-    }
-
-    .col-md-4 {
-        width: 33.333333%;
-    }
-    
-    .col-md-3 {
-        width: 25%;
-    }
-
-    .sandeco-contato {
-        height: auto;
-        min-height: 100vh;
-    }
-
-    .contato-text .titulo {
-        font-size: 1.8rem;
-    }
-
-    .contato-text .descricao {
-        font-size: 1rem;
-    }
-
-    .contato-image {
-        height: 40vh;
-    }
-}
 
 /* Mobile (576px) */
 @media (max-width: 576px) {
     .header {
-        background-color: var(--primary-color);
+        background-color: var(--bg-color);
         position: fixed;
         width: 100%;
         top: 0;
@@ -1616,7 +999,7 @@ h1.hero-title {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding: 4rem 2rem;
+        padding: 2rem 2rem;
         gap: 1.5rem;
         z-index: 999;
         opacity: 0;
@@ -1650,48 +1033,93 @@ h1.hero-title {
         opacity: 1;
     }
 
+    .row {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .testimonial-card {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
     .hero {
         padding-top: 60px;
+        background-image: url('../img/responsivo/hero-responsivo.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        min-height: 100vh;
+        width: 100%;
     }
 
     .hero-content {
-        padding: 0 1rem;
-        height: auto;
+        padding: 0;
         min-height: 100vh;
         display: flex;
         flex-direction: column;
+        gap: 0;
+        justify-content: flex-start;
+        max-width: 100%;
+        width: 100%;
+        overflow: hidden;
+        background-image: none;
     }
 
     .hero-text {
-        padding: 2rem 0;
         order: 2;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        width: 100%;
+        max-width: 100%;
     }
 
     .hero-image {
         width: 100%;
-        margin-right: 0;
-        margin-top: 0;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
         order: 1;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        overflow: hidden;
+        margin-top: 50px;
+    }
+
+    .hero-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: 0;
+        object-fit: cover;
+        
     }
 
     .hero-title {
         font-size: 2.5rem;
-        margin-left: 0;
+        margin: 0;
+        padding-top: 0.5rem;
+        width: 100%;
     }
 
     .hero-name-macedo {
-        font-size: 2rem;
-        margin-left: 0;
+        font-size: 1rem;
+        margin: 0;
+        width: 100%;
     }
 
     .hero-subtitle {
-        margin-left: 0;
+        margin: 0;
         font-size: 1rem;
+        width: 100%;
     }
 
     .hero-text h3 {
         font-size: 0.9rem;
-        margin-left: 0;
+        margin: 0;
+        width: 100%;
     }
 
     .btn-san {
@@ -1703,6 +1131,7 @@ h1.hero-title {
         grid-template-columns: 1fr;
         padding: 0 1rem;
     }
+
 }
 
 /* ==========================================================================
