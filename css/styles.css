@@ -153,21 +153,28 @@ body {
     text-align: center;
 }
 
+.hero-text .btn-san {
+    margin-top: 2rem;
+    margin-left: 100px;
+    margin-right: 100px;
+    width: auto;
+}
+
 .btn-san:hover {
-    background-color: #004a8c;
+    background-color: #bdbdbd;
     transform: translateY(-2px);
-    border-color: var(--primary-color);
-    box-shadow: 0 5px 15px rgba(50, 161, 255, 0.2);
+    border-color: #3bff76;
+    font-weight: 700;
+    color: #003b93;
+    box-shadow: 0 5px 15px var(--primary-color);
+;
 }
 
 .btn-san:active {
     transform: translateY(0);
 }
 
-.btn-san-hero {
-    margin-left: 2rem;
-    width: 100px;
-}
+
 
 /* ==========================================================================
    5. Seções
@@ -221,10 +228,7 @@ body {
     z-index: 2;
 }
 
-.hero-text .btn-san {
-    margin-top: 2rem;
-    width: auto;
-}
+
 
 .hero-image {
     width: 50%;
@@ -247,10 +251,11 @@ body {
 
 h4.hero-subtitle {
     position: relative;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-weight: 300;    
     opacity: 0.9;    
-    margin-left: 300px;
+    margin-left: 375px;
+    margin-bottom: -20px;
 }
 
 h1.hero-title {
@@ -271,6 +276,7 @@ h1.hero-title {
     margin-left:280px;
     text-align: center;
     line-height: 1;
+    margin-top: -10px;
 }
 
 .hero-text h3 {
@@ -976,6 +982,7 @@ h1.hero-title {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        height: 60px;
     }
 
     .logo {
@@ -986,6 +993,30 @@ h1.hero-title {
 
     .menu-toggle {
         display: flex;
+        position: relative;
+        top: 0;
+        right: 0;
+        padding: 0;
+        z-index: 1001;
+        height: 24px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menu-toggle span {
+        width: 24px;
+        height: 2px;
+        background-color: var(--white);
+        transition: all 0.3s ease;
+        transform-origin: center;
+    }
+
+    .menu-toggle.active span:first-child {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .menu-toggle.active span:last-child {
+        transform: translateY(-8px) rotate(-45deg);
     }
 
     .nav-links {
@@ -1097,34 +1128,31 @@ h1.hero-title {
         
     }
 
-    .hero-title {
-        font-size: 2.5rem;
+    h4.hero-subtitle {
+        margin-left: 140px;
+        font-size: 1.3rem;
+        width: 100%;
+        margin-bottom: -25px;
+    }
+
+    h1.hero-title {
+        font-size:5rem;
         margin: 0;
-        padding-top: 0.5rem;
+
         width: 100%;
     }
 
     .hero-name-macedo {
         font-size: 1rem;
-        margin: 0;
-        width: 100%;
-    }
-
-    .hero-subtitle {
-        margin: 0;
-        font-size: 1rem;
+        margin-left: 60px;
+        margin-top: -10px;
         width: 100%;
     }
 
     .hero-text h3 {
-        font-size: 0.9rem;
+        font-size: 1rem;
         margin: 0;
         width: 100%;
-    }
-
-    .btn-san {
-        font-size: 0.8rem;
-        padding: 10px 15px;
     }
 
     .livros-grid {
