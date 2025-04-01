@@ -46,7 +46,7 @@
                 <h3 data-aos="fade-up" 
                 data-aos-delay="1500"
                 data-aos-duration="1500">34 anos na computação</h3>
-                <a href="https://chk.eduzz.com/E9OOKQXG9B" target="_blank" class="btn-san" data-aos="fade-left" data-aos-delay="2000">Eu quero Sandeco no meu evento</a>
+                <a href="#formulario" class="btn-san" data-aos="fade-left" data-aos-delay="2000">Eu quero Sandeco no meu evento</a>
             </div>
 
             <div class="hero-image">
@@ -169,9 +169,7 @@
             </iframe>
         </div>
         <div class="d-grid gap-2 col-8 col-md-3 mx-auto py-5" data-aos="fade-up" data-aos-delay="400">
-            <a href="https://chk.eduzz.com/E9OOKQXG9B" target="_blank">
-                <button type="button" class="btn-san">eu quero sandeco no meu evento</button>
-            </a>
+            <a href="#formulario" class="btn-san">eu quero Sandeco no meu evento</a>
         </div>
     </section>
 
@@ -275,7 +273,7 @@
                 </div>
               </div>
               <div class="btn-container">
-                <a href="https://chk.eduzz.com/E9OOKQXG9B" target="_blank" class="btn-san">eu quero Sandeco no meu evento</a>
+                <a href="#formulario" class="btn-san">eu quero Sandeco no meu evento</a>
               </div>
             </div>
           </section>
@@ -293,10 +291,8 @@
                         com palestras envolventes sobre Inteligência Artificial, 
                         tecnologia e inovação.
                     </div>
-                    <div class="d-grid gap-2 col-8 col-md-3 mx-auto py-5" data-aos="fade-up" data-aos-delay="400">
-                        <a href="https://chk.eduzz.com/E9OOKQXG9B" target="_blank">
-                            <button type="button" class="btn-san">eu quero Sandeco no meu evento</button>
-                        </a>
+                    <div  data-aos="fade-up" data-aos-delay="400">
+                        <a href="#formulario" class="btn-san">eu quero Sandeco no meu evento</a>
                     </div>
                 </div>
                 <div class="contato-image" data-aos="fade-right" data-aos-duration="1500">
@@ -304,6 +300,85 @@
                 </div>
             </div>
         </section>
+
+    <section class="form-contato" id="formulario">
+        <div class="form-contato-container">
+            <h2>Solicite uma Palestra</h2>
+            <form action="#" method="POST">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="nome">Nome</label>
+                        <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="funcao">Função</label>
+                        <input type="text" id="funcao" name="funcao" placeholder="Sua função na empresa" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="empresa">Empresa</label>
+                        <input type="text" id="empresa" name="empresa" placeholder="Nome da empresa" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cidade">Cidade</label>
+                        <input type="text" id="cidade" name="cidade" placeholder="Cidade do evento" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="data">Data</label>
+                        <input type="date" id="data" name="data" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="horario">Horário</label>
+                        <input type="time" id="horario" name="horario" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="celular">Celular</label>
+                        <input type="tel" id="celular" name="celular" placeholder="(00) 00000-0000" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Formato da Palestra</label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="formato" value="presencial" required>
+                            Presencial
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="formato" value="online" required>
+                            Online
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="quantidade">Quantidade de Palestras</label>
+                    <select id="quantidade" name="quantidade" required>
+                        <option value="">Selecione a quantidade</option>
+                        <option value="1">1 Palestra</option>
+                        <option value="2">2 Palestras</option>
+                        <option value="3">3 Palestras</option>
+                        <option value="4">4 Palestras</option>
+                        <option value="5+">5 ou mais Palestras</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="form-submit">Enviar Solicitação</button>
+            </form>
+        </div>
+    </section>
 
     <footer class="footer">
         <div class="container">

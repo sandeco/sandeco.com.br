@@ -1008,4 +1008,234 @@ h1.hero-title {
     100% { opacity: 0.5; }
 }
 
+/* Formulário de Contato */
+.form-contato {
+    padding: 4rem 1.5rem;
+    background: linear-gradient(to bottom, #0f172a, #1e293b);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-contato-container {
+    width: 100%;
+    max-width: 580px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 3rem;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.form-contato h2 {
+    font-size: 3rem;
+    background: linear-gradient(to right, #60a5fa, #3b82f6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 2.5rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    color: #94a3b8;
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 1rem 1.25rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+}
+
+.form-group input:hover,
+.form-group select:hover {
+    border-color: rgba(96, 165, 250, 0.5);
+    background: rgba(255, 255, 255, 0.07);
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #60a5fa;
+    background: rgba(255, 255, 255, 0.07);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.25);
+}
+
+.form-group select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 6L11 1' stroke='%2394a3b8' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1.25rem center;
+    padding-right: 2.5rem;
+}
+
+.form-group select option {
+    background-color: #1a2942;
+    color: #fff;
+    padding: 1rem;
+}
+
+.form-group select:focus option:checked {
+    background: linear-gradient(to right, #60a5fa, #3b82f6);
+}
+
+.form-group select option:hover {
+    background-color: #2d4a6d;
+}
+
+.radio-group {
+    display: flex;
+    gap: 3rem;
+    margin-top: 0.75rem;
+    padding: 0.5rem 0;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    cursor: pointer;
+}
+
+.radio-option input[type="radio"] {
+    appearance: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    margin: 0;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.radio-option input[type="radio"]:checked {
+    border-color: #60a5fa;
+}
+
+.radio-option input[type="radio"]:checked::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0.75rem;
+    height: 0.75rem;
+    background-color: #60a5fa;
+    border-radius: 50%;
+    animation: radioScale 0.2s ease;
+}
+
+@keyframes radioScale {
+    0% { transform: translate(-50%, -50%) scale(0); }
+    100% { transform: translate(-50%, -50%) scale(1); }
+}
+
+.radio-option label {
+    color: #94a3b8;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.form-submit {
+    width: 100%;
+    padding: 1.25rem;
+    background: linear-gradient(to right, #60a5fa, #3b82f6);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.125rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 2.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.form-submit::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #3b82f6, #2563eb);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.form-submit:hover::before {
+    opacity: 1;
+}
+
+.form-submit span {
+    position: relative;
+    z-index: 1;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-group input::placeholder {
+    color: #64748b;
+}
+
+/* Estilo para campos com erro */
+.form-group.error input,
+.form-group.error select {
+    border-color: #ef4444;
+}
+
+.form-group.error .error-message {
+    color: #ef4444;
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+}
+
+/* Animação de loading no botão */
+.form-submit.loading {
+    color: transparent;
+}
+
+.form-submit.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
  
