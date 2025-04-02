@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sandeco</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
@@ -50,7 +50,7 @@
             </div>
 
             <div class="hero-image">
-                <img src="img/2.png" alt="Professor Sandeco Macedo" 
+                <img src="{{ url_for('static', filename='img/2.png') }}" alt="Professor Sandeco Macedo" 
                                     data-aos="fade-up" 
                                     data-aos-delay="200"
                                     data-aos-duration="1500">
@@ -65,68 +65,68 @@
         <div class="connections-container" id="marcasCarousel">
             <!-- Primeiro conjunto -->
             <div class="connection-card">
-                <img src="img/marcas/1.jpg" alt="Marca 1">
+                <img src="{{ url_for('static', filename='img/marcas/1.jpg') }}" alt="Marca 1">
             </div>
             <div class="connection-card">
-                <img src="img/marcas/2.jpg" alt="Marca 2">
+                <img src="{{ url_for('static', filename='img/marcas/2.jpg') }}" alt="Marca 2">
             </div>
             <div class="connection-card">
-                <img src="img/marcas/3.jpg" alt="Marca 3">
+                <img src="{{ url_for('static', filename='img/marcas/3.jpg') }}" alt="Marca 3">
             </div>
             <div class="connection-card">
-                <img src="img/marcas/4.jpg" alt="Marca 4">
+                <img src="{{ url_for('static', filename='img/marcas/4.jpg') }}" alt="Marca 4">
             </div>
             <div class="connection-card">
-                <img src="img/marcas/5.jpg" alt="Marca 5">
+                <img src="{{ url_for('static', filename='img/marcas/5.jpg') }}" alt="Marca 5">
             </div>
             <div class="connection-card">
-                <img src="img/marcas/6.jpg" alt="Marca 6">
+                <img src="{{ url_for('static', filename='img/marcas/6.jpg') }}" alt="Marca 6">
             </div>
             <div class="connection-card">
-                <img src="img/marcas/7.jpg" alt="Marca 7">
+                <img src="{{ url_for('static', filename='img/marcas/7.jpg') }}" alt="Marca 7">
             </div>
             <div class="connection-card">
-                <img src="img/marcas/8.jpg" alt="Marca 8">
+                <img src="{{ url_for('static', filename='img/marcas/8.jpg') }}" alt="Marca 8">
             </div>
             <div class="connection-card">
-                <img src="img/marcas/9.jpg" alt="Marca 9">
+                <img src="{{ url_for('static', filename='img/marcas/9.jpg') }}" alt="Marca 9">
             </div>
             <div class="connection-card">
-                <img src="img/marcas/10.jpg" alt="Marca 10">
+                <img src="{{ url_for('static', filename='img/marcas/10.jpg') }}" alt="Marca 10">
             </div>
             <!-- Duplicando para criar efeito infinito -->
             <div class="connection-card">
-                <img src="img/marcas/1.jpg" alt="Marca 1">
+                <img src="{{ url_for('static', filename='img/marcas/1.jpg') }}" alt="Marca 1">
             </div>
             <div class="connection-card">
-                <img src="img/marcas/2.jpg" alt="Marca 2">
+                <img src="{{ url_for('static', filename='img/marcas/2.jpg') }}" alt="Marca 2">
             </div>
             <div class="connection-card">
-                <img src="img/marcas/3.jpg" alt="Marca 3">
+                <img src="{{ url_for('static', filename='img/marcas/3.jpg') }}" alt="Marca 3">
             </div>
             <div class="connection-card">
-                <img src="img/marcas/4.jpg" alt="Marca 4">
+                <img src="{{ url_for('static', filename='img/marcas/4.jpg') }}" alt="Marca 4">
             </div>
             <div class="connection-card">
-                <img src="img/marcas/5.jpg" alt="Marca 5">
+                <img src="{{ url_for('static', filename='img/marcas/5.jpg') }}" alt="Marca 5">
             </div>
             <div class="connection-card">
-                <img src="img/marcas/6.jpg" alt="Marca 6">
+                <img src="{{ url_for('static', filename='img/marcas/6.jpg') }}" alt="Marca 6">
             </div>
             <div class="connection-card">
-                <img src="img/marcas/7.jpg" alt="Marca 7">
+                <img src="{{ url_for('static', filename='img/marcas/7.jpg') }}" alt="Marca 7">
             </div>
             <div class="connection-card">
-                <img src="img/marcas/8.jpg" alt="Marca 8">
+                <img src="{{ url_for('static', filename='img/marcas/8.jpg') }}" alt="Marca 8">
             </div>
             <div class="connection-card">
-                <img src="img/marcas/9.jpg" alt="Marca 9">
+                <img src="{{ url_for('static', filename='img/marcas/9.jpg') }}" alt="Marca 9">
             </div>
             <div class="connection-card">
-                <img src="img/marcas/10.jpg" alt="Marca 9">
+                <img src="{{ url_for('static', filename='img/marcas/10.jpg') }}" alt="Marca 9">
             </div>
             <div class="connection-card">
-                <img src="img/marcas/11.jpg" alt="Marca 9">
+                <img src="{{ url_for('static', filename='img/marcas/11.jpg') }}" alt="Marca 9">
             </div>
         </div>
     </section>
@@ -134,7 +134,7 @@
     <section id="professor" class="sandeco-escritor">
         <div class="escritor-content">
             <div class="escritor-image" data-aos="fade-right" data-aos-duration="1500">
-                <img src="img/04.png" alt="Sandeco Escritor">
+                <img src="{{ url_for('static', filename='img/04.png') }}" alt="Sandeco Escritor">
             </div>
             <div class="escritor-text">
                 <div class="titulo" data-aos="fade-left" data-aos-duration="1500">
@@ -177,28 +177,28 @@
         <h2 data-aos="fade-up" data-aos-duration="1000">Livros do Sandeco</h2>
         <div class="livros-grid">
             <a href="https://physia.com.br/guardrails/" class="livro-card" data-aos="fade-up" data-aos-delay="200">
-                <img src="img/mocks/1.png" alt="Livro Guardrails">
+                <img src="{{ url_for('static', filename='img/mocks/1.png') }}" alt="Livro Guardrails">
             </a>
             <a href="https://physia.com.br/crewai2/" class="livro-card" data-aos="fade-up" data-aos-delay="300">
-                <img src="img/mocks/2.png" alt="Livro CrewAI 2">
+                <img src="{{ url_for('static', filename='img/mocks/2.png') }}" alt="Livro CrewAI 2">
             </a>
             <a href="https://physia.com.br/python/" class="livro-card" data-aos="fade-up" data-aos-delay="400">
-                <img src="img/mocks/3.png" alt="Livro Python">
+                <img src="{{ url_for('static', filename='img/mocks/3.png') }}" alt="Livro Python">
             </a>
             <a href="https://physia.com.br/crewai1/" class="livro-card" data-aos="fade-up" data-aos-delay="500">
-                <img src="img/mocks/4.png" alt="Livro CrewAI 1">
+                <img src="{{ url_for('static', filename='img/mocks/4.png') }}" alt="Livro CrewAI 1">
             </a>
             <a href="https://physia.com.br/prompts/" class="livro-card" data-aos="fade-up" data-aos-delay="600">
-                <img src="img/mocks/5.png" alt="Livro Prompts">
+                <img src="{{ url_for('static', filename='img/mocks/5.png') }}" alt="Livro Prompts">
             </a>
             <a href="https://physia.com.br/deeplearning/" class="livro-card" data-aos="fade-up" data-aos-delay="700">
-                <img src="img/mocks/6.png" alt="Livro Deep Learning">
+                <img src="{{ url_for('static', filename='img/mocks/6.png') }}" alt="Livro Deep Learning">
             </a>
             <a href="https://physia.com.br/orange/" class="livro-card" data-aos="fade-up" data-aos-delay="800">
-                <img src="img/mocks/7.png" alt="Livro Orange">
+                <img src="{{ url_for('static', filename='img/mocks/7.png') }}" alt="Livro Orange">
             </a>
             <a href="https://physia.com.br/streamlit/" class="livro-card" data-aos="fade-up" data-aos-delay="900">
-                <img src="img/mocks/8.png" alt="Livro Streamlit">
+                <img src="{{ url_for('static', filename='img/mocks/8.png') }}" alt="Livro Streamlit">
             </a>
         </div>
     </section>
@@ -206,7 +206,7 @@
     <section id="embaixador" class="sandeco-embaixador">
         <div class="embaixador-content">
             <div class="embaixador-image" data-aos="fade-right" data-aos-duration="1500">
-                <img src="img/embaixador.png" alt="Sandeco Embaixador">
+                <img src="{{ url_for('static', filename='img/embaixador.png') }}" alt="Sandeco Embaixador">
             </div>
             <div class="embaixador-text">
                 <div class="titulo" data-aos="fade-left" data-aos-duration="1500">
@@ -236,7 +236,7 @@
         
                 <div class="col-12 col-md-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                   <div class="testimonial-card">
-                    <img src="img/pessoas/João.png" alt="João Moura" class="testimonial-img">
+                    <img src="{{ url_for('static', filename='img/pessoas/João.png') }}" alt="João Moura" class="testimonial-img">
                     <p class="testimonial-text">
                       "Tive a honra de colaborar e ver de perto a paixão do professor pelo poder transformador da inteligência
                       artificial na educação e em outras áreas."
@@ -249,7 +249,7 @@
         
                 <div class="col-12 col-md-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
                   <div class="testimonial-card">
-                    <img src="img/pessoas/francesco.png" alt="Francesco Farrugia" class="testimonial-img">
+                    <img src="{{ url_for('static', filename='img/pessoas/francesco.png') }}" alt="Francesco Farrugia" class="testimonial-img">
                     <p class="testimonial-text">
                       "Todo o trabalho do Sandeco é excepcionalmente bem executado e de alta qualidade, sendo fundamental para
                       profissionais que não querem ficar de fora do novo e empolgante mundo da Inteligência Artificial."
@@ -262,7 +262,7 @@
         
                 <div class="col-12 col-md-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
                   <div class="testimonial-card">
-                    <img src="img/pessoas/davidson.png" alt="Davidson Gomes" class="testimonial-img">
+                    <img src="{{ url_for('static', filename='img/pessoas/davidson.png') }}" alt="Davidson Gomes" class="testimonial-img">
                     <p class="testimonial-text">
                       "Sou amigo e parceiro do Prof. Sandeco e reconheço que suas obras representam o que há de mais avançado e
                       inovador no estado da arte da Inteligência Artificial."
@@ -296,7 +296,7 @@
                     </div>
                 </div>
                 <div class="contato-image" data-aos="fade-right" data-aos-duration="1500">
-                    <img src="img/sandeco-contato.png" alt="Sandeco Contato">
+                    <img src="{{ url_for('static', filename='img/sandeco-contato.png') }}" alt="Sandeco Contato">
                 </div>
             </div>
         </section>
@@ -304,7 +304,16 @@
     <section class="form-contato" id="formulario">
         <div class="form-contato-container">
             <h2>Solicite uma Palestra</h2>
-            <form action="#" method="POST">
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    {% for category, message in messages %}
+                        <div class="alert alert-{{ category }}">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+            <form action="{{ url_for('submit_form') }}" method="POST">
                 <div class="form-row">
                     <div class="form-group">
                         <label for="nome">Nome</label>
@@ -386,8 +395,11 @@
         </div>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script src="js/script.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html> 

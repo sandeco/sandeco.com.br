@@ -1,11 +1,11 @@
-// Inicializa as animações AOS
-AOS.init({
-    duration: 1500,
-    once: true,
-    offset: 100
-});
-
 document.addEventListener('DOMContentLoaded', function() {
+    // Inicializa as animações AOS
+    AOS.init({
+        duration: 1500,
+        once: true,
+        offset: 100
+    });
+
     const carousel = document.getElementById('marcasCarousel');
     let isDown = false;
     let startX;
