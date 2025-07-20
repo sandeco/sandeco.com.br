@@ -22,7 +22,7 @@ html {
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'SenticoSansDT', 'Montserrat', sans-serif;
     line-height: 1.0;
     color: var(--text-color);
     background-color: #1c1c1c;
@@ -75,6 +75,7 @@ body {
     font-weight: 700;
     color: var(--white);
     font-style: italic;
+    font-family: 'SenticoSansDT', sans-serif;
 }
 
 .nav-links {

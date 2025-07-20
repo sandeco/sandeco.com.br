@@ -1,4 +1,26 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Calcula os anos dinamicamente
+    function calcularAnos() {
+        const anoAtual = new Date().getFullYear();
+        const anosIA = anoAtual - 2009;
+        const anosComputacao = anoAtual - 1991;
+        
+        // Atualiza os elementos no DOM
+        const elementoAnosIA = document.getElementById('anos-ia');
+        const elementoAnosComputacao = document.getElementById('anos-computacao');
+        
+        if (elementoAnosIA) {
+            elementoAnosIA.textContent = `${anosIA} anos na Inteligência Artificial`;
+        }
+        
+        if (elementoAnosComputacao) {
+            elementoAnosComputacao.textContent = `${anosComputacao} anos na computação`;
+        }
+    }
+    
+    // Executa o cálculo dos anos
+    calcularAnos();
+    
     // Inicializa as animações AOS
     AOS.init({
         duration: 1500,

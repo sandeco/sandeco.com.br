@@ -1,3 +1,27 @@
-.ignore
+# Evita copiar ambientes e configs locais
+.venv/
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+*.tar
+*.log
+*.lock
+*.db
+.DS_Store
+.cursor
+
+# Evita arquivos de controle e IDE
+.git/
 .gitignore
-.git
+.python-version
+
+# Arquivos de build ou de empacotamento
+*.tar.gz
+*.egg-info/
+dist/
+build/
+
+# VSCode e editores
+.vscode/
+*.swp

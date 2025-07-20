@@ -1,8 +1,8 @@
 # Construa a imagem do Docker
-docker build -t sandeco.com.br .
+docker build -t sandeco-site .
 
 # Gere um arquivo TAR da imagem para transferir para a VPS
-docker save -o sandeco.com.br.tar sandeco.com.br
+docker save -o sandeco-site.tar sandeco-site
 
 # Executar na vps
 /opt/nginx-proxy/update-sandeco.com.br.sh

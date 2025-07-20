@@ -1,0 +1,170 @@
+/* ===== FONTES SENTICOSANS ===== */
+
+/* Importação das fontes SenticoSansDT */
+@font-face {
+    font-family: 'SenticoSansDT';
+    src: url('../fonts/SenticoSansDT-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SenticoSansDT';
+    src: url('../fonts/SenticoSansDT-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SenticoSansDT';
+    src: url('../fonts/SenticoSansDT-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SenticoSansDT';
+    src: url('../fonts/SenticoSansDT-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SenticoSansDT';
+    src: url('../fonts/SenticoSansDT-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SenticoSansDT';
+    src: url('../fonts/SenticoSansDT-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Versões Itálicas */
+@font-face {
+    font-family: 'SenticoSansDT';
+    src: url('../fonts/SenticoSansDT-ThinItalic.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SenticoSansDT';
+    src: url('../fonts/SenticoSansDT-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SenticoSansDT';
+    src: url('../fonts/SenticoSansDT-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SenticoSansDT';
+    src: url('../fonts/SenticoSansDT-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SenticoSansDT';
+    src: url('../fonts/SenticoSansDT-BoldItalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SenticoSansDT';
+    src: url('../fonts/SenticoSansDT-ExtraBoldIta.ttf') format('truetype');
+    font-weight: 800;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* Aplicação da fonte como padrão do site */
+* {
+    font-family: 'SenticoSansDT', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+body {
+    font-family: 'SenticoSansDT', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Classes utilitárias para diferentes pesos */
+.font-thin {
+    font-weight: 100;
+}
+
+.font-light {
+    font-weight: 300;
+}
+
+.font-regular {
+    font-weight: 400;
+}
+
+.font-medium {
+    font-weight: 500;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.font-extrabold {
+    font-weight: 800;
+}
+
+/* Classes para itálico */
+.font-italic {
+    font-style: italic;
+}
+
+.font-thin-italic {
+    font-weight: 100;
+    font-style: italic;
+}
+
+.font-light-italic {
+    font-weight: 300;
+    font-style: italic;
+}
+
+.font-regular-italic {
+    font-weight: 400;
+    font-style: italic;
+}
+
+.font-medium-italic {
+    font-weight: 500;
+    font-style: italic;
+}
+
+.font-bold-italic {
+    font-weight: 700;
+    font-style: italic;
+}
+
+.font-extrabold-italic {
+    font-weight: 800;
+    font-style: italic;
+} 

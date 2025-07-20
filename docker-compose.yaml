@@ -1,0 +1,20 @@
+services:
+  flask-app:
+    build:
+      context: .
+    container_name: flask-sandeco
+    environment:
+      - VIRTUAL_HOST=sandeco.com.br
+      - LETSENCRYPT_HOST=sandeco.com.br
+      - LETSENCRYPT_EMAIL=sandeco@sandeco.com.br
+    env_file:
+      - .env
+    expose:
+      - "80"
+    restart: always
+    networks:
+      - proxy
+
+networks:
+  proxy:
+    external: true

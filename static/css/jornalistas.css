@@ -1,0 +1,607 @@
+body {
+  margin: 0;
+  font-family: 'SenticoSansDT', 'Montserrat', sans-serif;
+  background: #222222;
+
+  color: white;
+  overflow-x: hidden;
+}
+
+@media (max-width: 900px) {
+  body {
+    background-size: cover;
+    background-position: center center;
+  }
+}
+
+/* Animações de entrada */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Removendo classes conflitantes com AOS */
+
+.fundo-jornalistas {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.fundo-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 0;
+}
+
+.overlay-conteudo {
+  position: relative;
+  z-index: 1;
+  padding: 4vw;
+  background: linear-gradient(to right, rgba(0,0,0,0.85), rgba(0,0,0,0.2));
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+  min-height: 100vh;
+}
+  
+
+.frase-destaque {
+  text-align: right;
+  font-size: 2.5vw;
+  font-weight: 600;
+  color: white;
+  opacity: 0.15 !important;
+  margin-bottom: 0.0em;
+  margin-right: 160px;
+  font-family: 'SenticoSansDT', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+h1 {
+  font-size: 3vw;
+  margin: 0.5em 0 0.2em;
+  color: white;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-family: 'SenticoSansDT', sans-serif;
+  font-style: italic;
+}
+
+h2 {
+  font-size: 2vw;
+  color: #88aaff;
+  font-weight: 800;
+  margin: 0.2em 0;
+  font-family: 'SenticoSansDT', sans-serif;
+}
+
+p {
+  font-size: 1.2vw;
+  max-width: 60ch;
+  line-height: 1.6;
+  font-family: 'SenticoSansDT', sans-serif;
+  font-weight: 400;
+}
+
+.not-lancamento {
+  color: #999999;
+  font: 1.5em verdana;
+}
+
+.dias-titulo {
+    margin-top: 150px;
+    margin-bottom: 0;
+    color: #88aaff;
+    font-style: italic;
+  /* Estilos específicos para o título "Google Meet" */
+}
+
+.dias-data {
+    color: #88aaff;
+    font-size: 4.5em;
+    margin-top: -0.3em;
+    /* Estilos específicos para a data */
+}
+
+.section {
+  margin-top: 2.5em;
+}
+
+.programa{
+    margin-top: 5.5em;
+}
+
+.ministrante {
+  margin-top: 4em;
+}
+
+.programa h2{
+    font-size: 3em;
+    font-style: italic;
+
+}
+
+.programa li {
+  font-size: 1.2vw;
+  margin-bottom: 0.5em;
+  list-style: '✔️ ';
+  font-family: 'SenticoSansDT', sans-serif;
+  font-weight: 400;
+}
+
+.botao-inscricao {
+  text-align: center;
+  margin: 2em 0 3em 0;
+}
+
+.btn-inscreva-se {
+  display: inline-block;
+  background: linear-gradient(135deg, #88aaff, #0066ff);
+  color: white;
+  text-decoration: none;
+  padding: 1.2em 3em;
+  border-radius: 50px;
+  font-family: 'SenticoSansDT', sans-serif;
+  font-weight: 700;
+  font-size: 1.5vw;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(136, 170, 255, 0.3);
+  border: 2px solid transparent;
+}
+
+.btn-inscreva-se:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(136, 170, 255, 0.4);
+  background: linear-gradient(135deg, #0066ff, #88aaff);
+}
+
+.inscricoes {
+  margin-top: 2em;
+  font-size: 1.2vw;
+  font-family: 'SenticoSansDT', sans-serif;
+  font-weight: 400;
+}
+
+.rodape {
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+  margin-top: 4em;
+  animation: fadeInUp 1s ease-out 1.5s both;
+}
+
+.rodape img {
+  width: 4vw;
+  border-radius: 100%;
+}
+
+.ministrante .rodape img {
+  width: 8vw;
+  border-radius: 100%;
+}
+
+/* Classes específicas para elementos da seção ministrante */
+.foto-sandeco {
+  width: 8vw;
+  border-radius: 100%;
+}
+
+.info-sandeco {
+  font-family: 'SenticoSansDT', sans-serif;
+  font-weight: 400;
+}
+
+.ministrado-por {
+  font-size: 1.2vw;
+  color: white;
+  font-weight: 600;
+}
+
+.nome-sandeco {
+  font-size: 2vw;
+  color: #88aaff;
+  font-weight: 900;
+}
+
+.cargo-sandeco {
+  font-size: 1vw;
+  color: white;
+  font-weight: 400;
+}
+
+.titulo-sandeco {
+  font-size: 1vw;
+  color: #88aaff;
+  font-weight: 600;
+}
+
+.rodape div {
+  font-size: 1vw;
+  line-height: 1.4;
+  font-family: 'SenticoSansDT', sans-serif;
+  font-weight: 400;
+}
+
+.logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5vw;
+  margin-top: 2em;
+  animation: fadeInUp 1s ease-out 1.8s both;
+}
+
+.logos span {
+  font-weight: 700;
+  font-size: 1.2vw;
+  font-family: 'SenticoSansDT', sans-serif;
+}
+
+.logo-discreta {
+  height: 5vw;
+  width: auto;
+  margin: 0 1vw;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.logo-discreta:hover {
+  opacity: 1;
+}
+
+/* Tablets e celulares paisagem (max-width: 768px) */
+@media (max-width: 768px) {
+  .overlay-conteudo {
+    padding: 3vw;
+  }
+  
+  h1 { 
+    font-size: 6vw; 
+    margin: 0.3em 0 0.1em;
+  }
+  
+  h2 { 
+    font-size: 4vw; 
+    margin: 0.1em 0;
+  }
+  
+  p, .programa li, .inscricoes, .rodape div, .logos span { 
+    font-size: 3.5vw; 
+  }
+  
+  .frase-destaque { 
+    font-size: 6vw; 
+    margin-bottom: 0.5em; 
+    margin-right: 100px;
+    text-align: center;
+  }
+  
+  .dias-titulo {
+    margin-top: 80px;
+    font-size: 5vw;
+  }
+  
+  .dias-data {
+    font-size: 6vw;
+    margin-top: -0.2em;
+  }
+  
+  .programa {
+    margin-top: 15em;
+  }
+  
+  .programa h2 {
+    font-size: 8vw;
+  }
+  
+  .programa li {
+    font-size: 4vw;
+    margin-bottom: 0.8em;
+  }
+  
+  .ministrante {
+    margin-top: 3em;
+  }
+  
+  .ministrante .rodape {
+    flex-direction: column;
+    text-align: center;
+    gap: 2vw;
+  }
+  
+  .foto-sandeco { 
+    width: 25vw; 
+  }
+  
+  .ministrado-por {
+    font-size: 4vw;
+  }
+  
+  .nome-sandeco { 
+    font-size: 8vw; 
+  }
+  
+  .cargo-sandeco {
+    font-size: 3.5vw;
+  }
+  
+  .titulo-sandeco {
+    font-size: 3.5vw;
+  }
+  
+  .botao-inscricao {
+    margin: 2em 0 2em 0;
+  }
+  
+  .btn-inscreva-se { 
+    font-size: 3.5vw; 
+    padding: 1em 2em; 
+    border-radius: 40px;
+  }
+  
+  .rodape {
+    flex-direction: column;
+    text-align: center;
+    gap: 2vw;
+    margin-top: 3em;
+  }
+  
+  .rodape img { 
+    width: 15vw; 
+  }
+  
+  .rodape div {
+    font-size: 3.5vw;
+  }
+  
+  .logos {
+    justify-content: center;
+    gap: 3vw;
+    margin-top: 1.5em;
+  }
+  
+  .logos span {
+    font-size: 4vw;
+  }
+  
+  .logo-discreta {
+    height: 12vw;
+    margin: 0 2vw;
+  }
+  
+  .not-lancamento {
+    font-size: 1vw;
+  }
+}
+
+/* Celulares retrato (max-width: 480px) */
+@media (max-width: 480px) {
+  .overlay-conteudo {
+    padding: 2vw;
+  }
+  
+  h1 { 
+    font-size: 7vw; 
+    line-height: 1.1;
+  }
+  
+  h2 { 
+    font-size: 5vw; 
+  }
+  
+  p, .programa li, .inscricoes, .rodape div { 
+    font-size: 4vw; 
+    line-height: 1.5;
+  }
+  
+  .frase-destaque { 
+    font-size: 7vw; 
+    margin-right: 10px;
+  }
+  
+  .dias-titulo {
+    margin-top: 60px;
+    font-size: 6vw;
+  }
+  
+  .dias-data {
+    font-size: 10vw;
+  }
+  
+  .programa {
+    margin-top: 12em;
+  }
+  
+  .programa h2 {
+    font-size: 10vw;
+  }
+  
+  .programa li {
+    font-size: 4.5vw;
+    margin-bottom: 1em;
+  }
+  
+  .foto-sandeco { 
+    width: 30vw; 
+  }
+  
+  .ministrado-por {
+    font-size: 4.5vw;
+  }
+  
+  .nome-sandeco { 
+    font-size: 9vw; 
+  }
+  
+  .cargo-sandeco {
+    font-size: 4vw;
+  }
+  
+  .titulo-sandeco {
+    font-size: 4vw;
+  }
+  
+  .btn-inscreva-se { 
+    font-size: 4.5vw; 
+    padding: 1.2em 2.5em; 
+  }
+  
+  .rodape img { 
+    width: 20vw; 
+  }
+  
+  .logos span {
+    font-size: 5vw;
+  }
+  
+  .logo-discreta {
+    height: 15vw;
+    margin: 0 3vw;
+  }
+  
+  .not-lancamento {
+    font-size: 3.5vw;
+  }
+}
+
+/* Telas muito pequenas (max-width: 360px) */
+@media (max-width: 360px) {
+  .overlay-conteudo {
+    padding: 1.5vw;
+  }
+  
+  h1 { 
+    font-size: 8vw; 
+  }
+  
+  .frase-destaque { 
+    font-size: 8vw; 
+  }
+  
+  .dias-data {
+    font-size: 12vw;
+  }
+  
+  .programa h2 {
+    font-size: 12vw;
+  }
+  
+  .btn-inscreva-se { 
+    font-size: 5.5vw; 
+    padding: 1.4em 2.8em; 
+  }
+  
+  .logo-discreta {
+    height: 18vw;
+    margin: 0 4vw;
+  }
+}
+
+.video-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 2em auto;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.video-container iframe {
+  width: 100%;
+  height: 450px;
+  border: none;
+  border-radius: 20px;
+}
+
+/* Responsividade para o vídeo */
+@media (max-width: 768px) {
+  .video-container {
+    margin: 1.5em auto;
+    border-radius: 15px;
+  }
+  
+  .video-container iframe {
+    height: 250px;
+    border-radius: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .video-container {
+    margin: 1em auto;
+    border-radius: 12px;
+  }
+  
+  .video-container iframe {
+    height: 200px;
+    border-radius: 12px;
+  }
+} 

@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sandeco</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/fonts.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -42,10 +43,10 @@
                 <h1 class="hero-name-macedo" data-aos="fade-right" data-aos-delay="500">Macedo</h1>
                 <h3 data-aos="fade-up" 
                 data-aos-delay="700"
-                data-aos-duration="1500">15 anos na Inteligência Artificial</h3>
+                data-aos-duration="1500" id="anos-ia">15 anos na Inteligência Artificial</h3>
                 <h3 data-aos="fade-up" 
                 data-aos-delay="1500"
-                data-aos-duration="1500">34 anos na computação</h3>
+                data-aos-duration="1500" id="anos-computacao">34 anos na computação</h3>
                 <a href="#formulario" class="btn-san" data-aos="fade-left" data-aos-delay="2000">Eu quero Sandeco no meu evento</a>
             </div>
 
@@ -65,6 +66,15 @@
         <div class="connections-container" id="marcasCarousel">
             <!-- Primeiro conjunto -->
             <div class="connection-card">
+                <img src="{{ url_for('static', filename='img/marcas/8.jpg') }}" alt="Marca 8">
+            </div>
+            <div class="connection-card">
+                <img src="{{ url_for('static', filename='img/marcas/4.jpg') }}" alt="Marca 4">
+            </div>
+            <div class="connection-card">
+                <img src="{{ url_for('static', filename='img/marcas/5.jpg') }}" alt="Marca 5">
+            </div>
+            <div class="connection-card">
                 <img src="{{ url_for('static', filename='img/marcas/1.jpg') }}" alt="Marca 1">
             </div>
             <div class="connection-card">
@@ -74,20 +84,12 @@
                 <img src="{{ url_for('static', filename='img/marcas/3.jpg') }}" alt="Marca 3">
             </div>
             <div class="connection-card">
-                <img src="{{ url_for('static', filename='img/marcas/4.jpg') }}" alt="Marca 4">
-            </div>
-            <div class="connection-card">
-                <img src="{{ url_for('static', filename='img/marcas/5.jpg') }}" alt="Marca 5">
-            </div>
-            <div class="connection-card">
                 <img src="{{ url_for('static', filename='img/marcas/6.jpg') }}" alt="Marca 6">
             </div>
             <div class="connection-card">
                 <img src="{{ url_for('static', filename='img/marcas/7.jpg') }}" alt="Marca 7">
             </div>
-            <div class="connection-card">
-                <img src="{{ url_for('static', filename='img/marcas/8.jpg') }}" alt="Marca 8">
-            </div>
+
             <div class="connection-card">
                 <img src="{{ url_for('static', filename='img/marcas/9.jpg') }}" alt="Marca 9">
             </div>
@@ -162,7 +164,7 @@
         <h2 data-aos="fade-up" data-aos-duration="1000">Assista uma palestra do Sandeco</h2>
         <div class="video-container" data-aos="fade-up" data-aos-delay="200">
             <iframe 
-                src="https://www.youtube.com/embed/H0tUZ0Vj7Uw?start=103" 
+                src="https://www.youtube.com/embed/5hrqLk29VKk?start=32" 
                 title="Palestra Sandeco Macedo" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                 allowfullscreen>

@@ -30,6 +30,15 @@ def index():
 def serve_static(filename):
     return send_from_directory('static', filename)
 
+
+@app.route('/jornalistas')
+def jornalistas():
+    return render_template('jornalistas.html')
+
+@app.route('/mentoria-ai')
+def mentoria_ai():
+    return render_template('mentoria-ai.html')
+
 @app.route('/submit_form', methods=['POST'])
 def submit_form():
     try:
@@ -64,7 +73,7 @@ def submit_form():
         # Cria a mensagem
         msg = Message(
             subject='Nova Solicitação de Palestra',
-            recipients=[os.getenv('MAIL_DEFAULT_SENDER')],
+            recipients=[os.getenv('MAIL_PHYSIA')],
             body=email_body
         )
 
@@ -77,8 +86,48 @@ def submit_form():
 
     except Exception as e:
         # Em caso de erro, retorna uma mensagem de erro
+        print(f"Erro ao enviar e-mail: {str(e)}")
         flash('Ocorreu um erro ao enviar sua solicitação. Por favor, tente novamente.', 'error')
         return redirect(url_for('index', _anchor='formulario'))
 
+@app.route('/submit_mentoria', methods=['POST'])
+def submit_mentoria():
+    try:
+        # Obtém os dados do formulário de mentoria
+        nome = request.form.get('nome')
+        email = request.form.get('email')
+        profissao = request.form.get('profissao')
+        motivacao = request.form.get('motivacao')
+
+        # Cria o corpo do e-mail
+        email_body = f"""
+        Nova inscrição na Mentoria de IA para Jornalistas:
+
+        Nome: {nome}
+        E-mail: {email}
+        Profissão/Área: {profissao}
+        Motivação: {motivacao}
+        """
+
+        # Cria a mensagem
+        msg = Message(
+            subject='Nova Inscrição - Mentoria IA para Jornalistas',
+            recipients=[os.getenv('MAIL_PHYSIA')],
+            body=email_body
+        )
+
+        # Envia o e-mail
+        mail.send(msg)
+
+        # Retorna uma mensagem de sucesso
+        flash('Sua inscrição foi enviada com sucesso! Você receberá o link de acesso por email.', 'success')
+        return redirect(url_for('mentoria_ai', _anchor='inscricao'))
+
+    except Exception as e:
+        # Em caso de erro, retorna uma mensagem de erro
+        print(f"Erro ao enviar inscrição: {str(e)}")
+        flash('Ocorreu um erro ao enviar sua inscrição. Por favor, tente novamente.', 'error')
+        return redirect(url_for('mentoria_ai', _anchor='inscricao'))
+
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=5000) 
+    app.run(debug=True, host='0.0.0.0', port=5001) 
